@@ -1,0 +1,16 @@
+{
+    "name":"几米阳光",
+    "short_name":"几米",
+    "description":"修炼内功，厚积薄发",
+    "?icons":[
+        {
+            "src":"avatar.jpg",
+            "type":"image/png",
+            "sizes":"144*144"
+        }
+    ],
+    "background_color":"#2196f3",
+    "display":"standalone",
+    "start_url":"index.html"
+
+}

@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo.jpg
-actionText: 终于出来了 →
+actionText: 敬请期待 →
 actionLink: /zh/guide/
 features:
 - title: 前端进阶积累
