@@ -10,5 +10,5 @@ features:
   details: 算法文档按照难度分级，代码中都有详细注释，且会提供多种解法，用以提升编程能力和逻辑能力比较有效的一种方式。
 - title: 代码块
   details: 比较小的代码块/知识点，一段话，一段代码就能说清楚, 开箱即用！
-footer: MIT Licensed | Copyright © 2019-present Evan You
+footer: MIT Licensed | Copyright © 2019-present Li Zheng
 ---
