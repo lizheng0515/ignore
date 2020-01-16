@@ -7,7 +7,7 @@ module.exports = {
         ['link', { rel: 'manifest', href: '/manifest.json' }], //
         ["link", { rel: "stylesheet", href: "/css/style.css" }],//自定义样式
     ],
-    base: '/ignore/', // 这是部署到github相关的配置 
+    base: '/ignore/', // 这是部署到github相关的配置 下面会讲
     markdown: {
         lineNumbers: true // 代码块显示行号
     },
