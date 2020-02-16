@@ -1,3 +1,3 @@
-[![Build Status](https://travis-ci.org/yangsenlin/snsdemo.svg?branch=master)](https://travis-ci.org/yangsenlin/snsdemo)
 
-修炼内功，无招胜有招。
+
+### 不要用战术上的勤奋，掩盖战略上的懒惰。
