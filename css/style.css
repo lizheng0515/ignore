@@ -55,6 +55,11 @@
     background: #474644;
     transform: scale(1.3);
 }
-
+/* main宽度 */
+.page .theme-default-content:not(.custom),
+.page .page-edit{
+    max-width: none;
+    margin: 0 120px;
+}
 
  
