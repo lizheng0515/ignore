@@ -1,0 +1,100 @@
+/* 
+**自定义引入样式   config.js  head 
+*/
+
+/* 滚动条 */
+::-webkit-scrollbar{
+    color:white;
+    background-color:white;
+    width:8px;
+    height:15px;
+    -webkit-box-shadow:2px 2px 6px rgba(0,0,0,.2) inset;
+}
+::-webkit-scrollbar-thumb{
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(.44,#282c34),color-stop(.72,#ccc),color-stop(.86,#ccc));
+    transition: all .3s ease-in-out;
+    border-radius:10px;
+}
+.navbar{
+    box-shadow: 0 5px 20px rgba(0,0,0,.03), 0 6px 6px rgba(0,0,0,.05);
+    transition: all 1s cubic-bezier(.25,.8,.25,1);
+}
+.navbar:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,.08), 0 6px 6px rgba(0,0,0,.1);
+}
+/* 导航图片 */
+.navbar .homw-link span:before{
+    display: inline-block;
+    content: '1231';
+    width: 3rem;
+    height: 2.4rem;
+    background: url('../images/logo.jpg') no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+.navbar .logo{
+    border-radius: 5px;
+}
+.home .hero img{
+    border-radius: 50%;
+    /* transform: rotateY(180deg); */
+    animation: rotation 4s ease infinite;
+}
+@keyframes rotation{
+    from { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
+    to { transform: rotateY(0deg); }
+}
+.home .hero img:hover {
+    /* transform: rotateY(180deg); */
+}
+/* 标题动画 */
+.card h2, .site-name, h1 {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: myGradientChange 4s linear infinite;
+    animation: myGradientChange 4s linear infinite;
+}
+@keyframes myGradientChange{
+    0%{background-position:0 0}
+    to{background-position:-100% 0}
+}
+.site-name, h1 {
+    background-image: -webkit-linear-gradient(left,#eee,#333 25%,#eee 50%,#333 75%,#eee);
+}
+/* 首页按钮 */
+#app .home .hero .action-button {
+    padding: .8rem 1.6rem;
+    background: #474644;
+    color: #fff;
+    border-bottom: 2px solid #33322f;
+    border-left: 3px solid #000;
+    box-shadow: -3px 5px 10px 3px rgba(51,50,47,.5), inset 5px -5px 20px 10px rgba(51,50,47,.5), 0 2px 1px rgba(0,0,0,.7);
+    -webkit-transition: -webkit-box-shadow .15s ease-in-out;
+    transition: all 0.3s;
+}
+.home .hero .action-button:hover{
+    background: #474644;
+    transform: scale(1.3);
+}
+/* main宽度 */
+.page .theme-default-content:not(.custom),
+.page .page-edit{
+    /* max-width: none;
+    margin: 0 120px; */
+    max-width: 900px;
+    margin: 0 auto;
+}
+@media (min-width: 959px){
+    .vuepress-blog-theme-content {
+        box-shadow: 0 10px 20px rgba(0,0,0,.05), 0 6px 6px rgba(0,0,0,.07);
+    }
+    
+}
+.sidebar{
+    box-shadow: 0 10px 20px rgba(0,0,0,.05), 0 6px 6px rgba(0,0,0,.07);
+}
+.about-img-big{
+    max-width: 600px;
+}

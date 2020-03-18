@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ES6、ES7、ES8、ES9、ES10新特性一览 | 前端进阶梳理</title>
+    <meta name="description" content="查缺补漏，厚积薄发">
+    <link rel="icon" href="/images/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.17757e47.css" as="style"><link rel="preload" href="/assets/js/app.4e0435ca.js" as="script"><link rel="preload" href="/assets/js/2.04219cb5.js" as="script"><link rel="preload" href="/assets/js/80.90c3558f.js" as="script"><link rel="preload" href="/assets/js/14.fa62e12d.js" as="script"><link rel="prefetch" href="/assets/js/10.fd7328de.js"><link rel="prefetch" href="/assets/js/100.6d8356e6.js"><link rel="prefetch" href="/assets/js/101.8f4a3183.js"><link rel="prefetch" href="/assets/js/102.d40f505b.js"><link rel="prefetch" href="/assets/js/103.8a69cf89.js"><link rel="prefetch" href="/assets/js/104.16723fdd.js"><link rel="prefetch" href="/assets/js/105.e3561ea4.js"><link rel="prefetch" href="/assets/js/106.1c38cbca.js"><link rel="prefetch" href="/assets/js/107.c9b7ead4.js"><link rel="prefetch" href="/assets/js/108.fec72140.js"><link rel="prefetch" href="/assets/js/109.e4d452c6.js"><link rel="prefetch" href="/assets/js/11.62420f25.js"><link rel="prefetch" href="/assets/js/110.c786ef84.js"><link rel="prefetch" href="/assets/js/111.d793af14.js"><link rel="prefetch" href="/assets/js/112.60663297.js"><link rel="prefetch" href="/assets/js/113.d2db788f.js"><link rel="prefetch" href="/assets/js/114.1005f472.js"><link rel="prefetch" href="/assets/js/115.d3d48b69.js"><link rel="prefetch" href="/assets/js/116.d0116306.js"><link rel="prefetch" href="/assets/js/117.096e81fc.js"><link rel="prefetch" href="/assets/js/118.6b1af5ca.js"><link rel="prefetch" href="/assets/js/119.0afe98c2.js"><link rel="prefetch" href="/assets/js/12.45cacbf6.js"><link rel="prefetch" href="/assets/js/120.3693037f.js"><link rel="prefetch" href="/assets/js/121.4f52f76f.js"><link rel="prefetch" href="/assets/js/122.6d51f9e1.js"><link rel="prefetch" href="/assets/js/123.6af9d3e1.js"><link rel="prefetch" href="/assets/js/124.0aae3048.js"><link rel="prefetch" href="/assets/js/125.5e3afd31.js"><link rel="prefetch" href="/assets/js/126.a8ec53ce.js"><link rel="prefetch" href="/assets/js/127.4b312a04.js"><link rel="prefetch" href="/assets/js/128.96d8d04e.js"><link rel="prefetch" href="/assets/js/129.05e536d7.js"><link rel="prefetch" href="/assets/js/13.7b9cecf2.js"><link rel="prefetch" href="/assets/js/130.1ac6a27d.js"><link rel="prefetch" href="/assets/js/131.bd67a98b.js"><link rel="prefetch" href="/assets/js/132.988d57ec.js"><link rel="prefetch" href="/assets/js/133.4d2a436c.js"><link rel="prefetch" href="/assets/js/134.6f80da26.js"><link rel="prefetch" href="/assets/js/135.b919c4a8.js"><link rel="prefetch" href="/assets/js/136.3e24bf0b.js"><link rel="prefetch" href="/assets/js/137.f2f2af70.js"><link rel="prefetch" href="/assets/js/138.5660bfd5.js"><link rel="prefetch" href="/assets/js/139.c278da1b.js"><link rel="prefetch" href="/assets/js/140.1089e7ad.js"><link rel="prefetch" href="/assets/js/141.afc3c310.js"><link rel="prefetch" href="/assets/js/142.20357454.js"><link rel="prefetch" href="/assets/js/143.205da5ee.js"><link rel="prefetch" href="/assets/js/144.44d7bb97.js"><link rel="prefetch" href="/assets/js/145.e9114ee2.js"><link rel="prefetch" href="/assets/js/15.a36fdfcc.js"><link rel="prefetch" href="/assets/js/16.26dac060.js"><link rel="prefetch" href="/assets/js/17.33c37d3b.js"><link rel="prefetch" href="/assets/js/18.9df62fb6.js"><link rel="prefetch" href="/assets/js/19.87850f83.js"><link rel="prefetch" href="/assets/js/20.727374e1.js"><link rel="prefetch" href="/assets/js/21.54b44bfc.js"><link rel="prefetch" href="/assets/js/22.a2b6288f.js"><link rel="prefetch" href="/assets/js/23.ff26b8aa.js"><link rel="prefetch" href="/assets/js/24.e116138d.js"><link rel="prefetch" href="/assets/js/25.68219dfd.js"><link rel="prefetch" href="/assets/js/26.62f0231f.js"><link rel="prefetch" href="/assets/js/27.9c31933e.js"><link rel="prefetch" href="/assets/js/28.5e7e5a76.js"><link rel="prefetch" href="/assets/js/29.76b9c597.js"><link rel="prefetch" href="/assets/js/3.e03a21f4.js"><link rel="prefetch" href="/assets/js/30.65be1bc1.js"><link rel="prefetch" href="/assets/js/31.7d6bf50f.js"><link rel="prefetch" href="/assets/js/32.73407af6.js"><link rel="prefetch" href="/assets/js/33.e9bcaf6e.js"><link rel="prefetch" href="/assets/js/34.7d2f6e9b.js"><link rel="prefetch" href="/assets/js/35.acef441e.js"><link rel="prefetch" href="/assets/js/36.93ad7b37.js"><link rel="prefetch" href="/assets/js/37.70309a57.js"><link rel="prefetch" href="/assets/js/38.9d4d713f.js"><link rel="prefetch" href="/assets/js/39.1009d0ef.js"><link rel="prefetch" href="/assets/js/4.41ee3e6d.js"><link rel="prefetch" href="/assets/js/40.eb713905.js"><link rel="prefetch" href="/assets/js/41.ce69d14f.js"><link rel="prefetch" href="/assets/js/42.13dd7ec0.js"><link rel="prefetch" href="/assets/js/43.060c75b5.js"><link rel="prefetch" href="/assets/js/44.f3b56735.js"><link rel="prefetch" href="/assets/js/45.20863ea8.js"><link rel="prefetch" href="/assets/js/46.3f27eedb.js"><link rel="prefetch" href="/assets/js/47.39b85e6f.js"><link rel="prefetch" href="/assets/js/48.3be89ba2.js"><link rel="prefetch" href="/assets/js/49.868df574.js"><link rel="prefetch" href="/assets/js/5.82ba14e2.js"><link rel="prefetch" href="/assets/js/50.9bc2f1af.js"><link rel="prefetch" href="/assets/js/51.cc6a4bf8.js"><link rel="prefetch" href="/assets/js/52.bc00435c.js"><link rel="prefetch" href="/assets/js/53.806ca95a.js"><link rel="prefetch" href="/assets/js/54.c088622d.js"><link rel="prefetch" href="/assets/js/55.ea7bfa2d.js"><link rel="prefetch" href="/assets/js/56.2956917b.js"><link rel="prefetch" href="/assets/js/57.a66acfbe.js"><link rel="prefetch" href="/assets/js/58.89d64c94.js"><link rel="prefetch" href="/assets/js/59.c9703f26.js"><link rel="prefetch" href="/assets/js/6.abd0b3ce.js"><link rel="prefetch" href="/assets/js/60.84fb508f.js"><link rel="prefetch" href="/assets/js/61.0458de69.js"><link rel="prefetch" href="/assets/js/62.732e2842.js"><link rel="prefetch" href="/assets/js/63.2a3868a5.js"><link rel="prefetch" href="/assets/js/64.60e5bbf5.js"><link rel="prefetch" href="/assets/js/65.ced324c9.js"><link rel="prefetch" href="/assets/js/66.908a941e.js"><link rel="prefetch" href="/assets/js/67.0b996a4c.js"><link rel="prefetch" href="/assets/js/68.0ba7e054.js"><link rel="prefetch" href="/assets/js/69.0fcad8c9.js"><link rel="prefetch" href="/assets/js/7.b6580899.js"><link rel="prefetch" href="/assets/js/70.fb7aeb7c.js"><link rel="prefetch" href="/assets/js/71.aed45d21.js"><link rel="prefetch" href="/assets/js/72.28d21aa5.js"><link rel="prefetch" href="/assets/js/73.87966027.js"><link rel="prefetch" href="/assets/js/74.2c8d829a.js"><link rel="prefetch" href="/assets/js/75.076fef8d.js"><link rel="prefetch" href="/assets/js/76.940a8c15.js"><link rel="prefetch" href="/assets/js/77.b1fd3795.js"><link rel="prefetch" href="/assets/js/78.1bd92f56.js"><link rel="prefetch" href="/assets/js/79.f847dd51.js"><link rel="prefetch" href="/assets/js/8.40a63a09.js"><link rel="prefetch" href="/assets/js/81.13e87c94.js"><link rel="prefetch" href="/assets/js/82.351912c0.js"><link rel="prefetch" href="/assets/js/83.127e331e.js"><link rel="prefetch" href="/assets/js/84.adc36f35.js"><link rel="prefetch" href="/assets/js/85.09c55380.js"><link rel="prefetch" href="/assets/js/86.0d7ea8a7.js"><link rel="prefetch" href="/assets/js/87.d2e7cb67.js"><link rel="prefetch" href="/assets/js/88.26ef9b72.js"><link rel="prefetch" href="/assets/js/89.107cb5dd.js"><link rel="prefetch" href="/assets/js/9.eb1fcb81.js"><link rel="prefetch" href="/assets/js/90.65cba6f7.js"><link rel="prefetch" href="/assets/js/91.9de7f016.js"><link rel="prefetch" href="/assets/js/92.f6f1b156.js"><link rel="prefetch" href="/assets/js/93.d5e571df.js"><link rel="prefetch" href="/assets/js/94.4f308905.js"><link rel="prefetch" href="/assets/js/95.2d8fedff.js"><link rel="prefetch" href="/assets/js/96.0e986d70.js"><link rel="prefetch" href="/assets/js/97.d4dfc858.js"><link rel="prefetch" href="/assets/js/98.95b33636.js"><link rel="prefetch" href="/assets/js/99.0b93c477.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.17757e47.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/hello-word.jpg" alt="前端进阶梳理" class="logo"> <span class="site-name can-hide">前端进阶梳理</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/md/resource/resource.html" class="nav-link">资源工具</a></div><div class="nav-item"><a href="/md/introduction/introduction.html" class="nav-link">导读</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Javascript" class="dropdown-title"><span class="title">Javascript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/js/jsBasic/" class="nav-link">JavaScript基础</a></li><li class="dropdown-item"><!----> <a href="/md/js/es6/" class="nav-link router-link-active">ECMAScript 6</a></li><li class="dropdown-item"><h4>JS书籍</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/md/js/book/你不知道的javascript上.html" class="nav-link">你不知道的JavaScript(上)</a></li><li class="dropdown-subitem"><a href="/md/js/book/你不知道的javascript中.html" class="nav-link">你不知道的JavaScript(中下)</a></li><li class="dropdown-subitem"><a href="/md/js/book/es6.html" class="nav-link">深入理解ES6</a></li><li class="dropdown-subitem"><a href="/md/js/book/algorithm.html" class="nav-link">JavaScript数据结构和算法</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端概括" class="dropdown-title"><span class="title">前端概括</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/webBasics/CSS/" class="nav-link">CSS / HTML</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/Node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/allPath/" class="nav-link">全链路开发</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/scope/" class="nav-link">领域分支</a></li></ul></div></div><div class="nav-item"><a href="/md/frame/" class="nav-link">框架/库</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日积月累" class="dropdown-title"><span class="title">日积月累</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/codeBlock/module/" class="nav-link">代码模块</a></li><li class="dropdown-item"><!----> <a href="/md/codeBlock/week/" class="nav-link">每周汇总</a></li><li class="dropdown-item"><!----> <a href="/md/codeBlock/jobInterview/" class="nav-link">面试收集</a></li><li class="dropdown-item"><h4>方法论</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/1.html" class="nav-link">编程思想</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/2.html" class="nav-link">开发原则</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/3.html" class="nav-link">开发流程</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/6.html" class="nav-link">代码规范</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/4.html" class="nav-link">设计模式</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/5.html" class="nav-link">开源协议</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/md/about/" class="nav-link">关于我</a></div> <a href="https://github.com/lizheng0515/ignore/issues" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/md/resource/resource.html" class="nav-link">资源工具</a></div><div class="nav-item"><a href="/md/introduction/introduction.html" class="nav-link">导读</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Javascript" class="dropdown-title"><span class="title">Javascript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/js/jsBasic/" class="nav-link">JavaScript基础</a></li><li class="dropdown-item"><!----> <a href="/md/js/es6/" class="nav-link router-link-active">ECMAScript 6</a></li><li class="dropdown-item"><h4>JS书籍</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/md/js/book/你不知道的javascript上.html" class="nav-link">你不知道的JavaScript(上)</a></li><li class="dropdown-subitem"><a href="/md/js/book/你不知道的javascript中.html" class="nav-link">你不知道的JavaScript(中下)</a></li><li class="dropdown-subitem"><a href="/md/js/book/es6.html" class="nav-link">深入理解ES6</a></li><li class="dropdown-subitem"><a href="/md/js/book/algorithm.html" class="nav-link">JavaScript数据结构和算法</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端概括" class="dropdown-title"><span class="title">前端概括</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/webBasics/CSS/" class="nav-link">CSS / HTML</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/Node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/allPath/" class="nav-link">全链路开发</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/scope/" class="nav-link">领域分支</a></li></ul></div></div><div class="nav-item"><a href="/md/frame/" class="nav-link">框架/库</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日积月累" class="dropdown-title"><span class="title">日积月累</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/codeBlock/module/" class="nav-link">代码模块</a></li><li class="dropdown-item"><!----> <a href="/md/codeBlock/week/" class="nav-link">每周汇总</a></li><li class="dropdown-item"><!----> <a href="/md/codeBlock/jobInterview/" class="nav-link">面试收集</a></li><li class="dropdown-item"><h4>方法论</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/1.html" class="nav-link">编程思想</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/2.html" class="nav-link">开发原则</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/3.html" class="nav-link">开发流程</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/6.html" class="nav-link">代码规范</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/4.html" class="nav-link">设计模式</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/5.html" class="nav-link">开源协议</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/md/about/" class="nav-link">关于我</a></div> <a href="https://github.com/lizheng0515/ignore/issues" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>ES6、ES7、ES8、ES9、ES10新特性一览</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#es6新特性（2015）" class="sidebar-link">ES6新特性（2015）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_1-类（class）" class="sidebar-link">1.类（class）</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_2-模块化-module" class="sidebar-link">2.模块化(Module)</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_3-箭头（arrow）函数" class="sidebar-link">3.箭头（Arrow）函数</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_4-函数参数默认值" class="sidebar-link">4.函数参数默认值</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_5-模板字符串" class="sidebar-link">5.模板字符串</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_6-解构赋值" class="sidebar-link">6.解构赋值</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_7-延展操作符-spread-operator" class="sidebar-link">7.延展操作符(Spread operator)</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_8-对象属性简写" class="sidebar-link">8.对象属性简写</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_9-promise" class="sidebar-link">9.Promise</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_10-支持let与const" class="sidebar-link">10.支持let与const</a></li></ul></li><li><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#es7新特性（2016）" class="sidebar-link">ES7新特性（2016）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_1-array-prototype-includes" class="sidebar-link">1.Array.prototype.includes()</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_2-指数操作符" class="sidebar-link">2.指数操作符</a></li></ul></li><li><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#es8新特性（2017）" class="sidebar-link">ES8新特性（2017）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_1-async-await" class="sidebar-link">1.async/await</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_2-object-values" class="sidebar-link">2.Object.values()</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_3-object-entries" class="sidebar-link">3.Object.entries()</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_4-string-padding" class="sidebar-link">4.String padding</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_5-函数参数列表结尾允许逗号" class="sidebar-link">5.函数参数列表结尾允许逗号</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_6-object-getownpropertydescriptors" class="sidebar-link">6.Object.getOwnPropertyDescriptors()</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_7-sharedarraybuffer对象" class="sidebar-link">7.SharedArrayBuffer对象</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_8-atomics对象" class="sidebar-link">8.Atomics对象</a></li></ul></li><li><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#es9新特性（2018）" class="sidebar-link">ES9新特性（2018）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_1-异步迭代" class="sidebar-link">1.异步迭代</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_2-promise-finally" class="sidebar-link">2.Promise.finally()</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_3-rest-spread-属性" class="sidebar-link">3.Rest/Spread 属性</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_4-正则表达式命名捕获组" class="sidebar-link">4.正则表达式命名捕获组</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_5-正则表达式反向断言" class="sidebar-link">5.正则表达式反向断言</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_6-正则表达式dotall模式" class="sidebar-link">6.正则表达式dotAll模式</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_7-正则表达式-unicode-转义" class="sidebar-link">7.正则表达式 Unicode 转义</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_8-非转义序列的模板字符串" class="sidebar-link">8.非转义序列的模板字符串</a></li></ul></li><li><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#es10新特性（2019）" class="sidebar-link">ES10新特性（2019）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_1-行分隔符（u-2028）和段分隔符（u-2029）符号现在允许在字符串文字中，与json匹配" class="sidebar-link">1.行分隔符（U + 2028）和段分隔符（U + 2029）符号现在允许在字符串文字中，与JSON匹配</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_2-更加友好的-json-stringify" class="sidebar-link">2.更加友好的 JSON.stringify</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_3-新增了array的flat-方法和flatmap-方法" class="sidebar-link">3.新增了Array的flat()方法和flatMap()方法</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_4-新增了string的trimstart-方法和trimend-方法" class="sidebar-link">4.新增了String的trimStart()方法和trimEnd()方法</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_5-object-fromentries" class="sidebar-link">5.Object.fromEntries()</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_6-symbol-prototype-description" class="sidebar-link">6.Symbol.prototype.description</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_7-string-prototype-matchall" class="sidebar-link">7.String.prototype.matchAll</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_8-function-prototype-tostring-现在返回精确字符，包括空格和注释" class="sidebar-link">8.Function.prototype.toString()现在返回精确字符，包括空格和注释</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_9-修改-catch-绑定" class="sidebar-link">9.修改 catch 绑定</a></li><li class="sidebar-sub-header"><a href="/md/js/es6/ES6%E3%80%81ES7%E3%80%81ES8%E3%80%81ES9%E3%80%81ES10%E6%96%B0%E7%89%B9%E6%80%A7%E6%A2%B3%E7%90%86.html#_10-新的基本数据类型bigint" class="sidebar-link">10.新的基本数据类型BigInt</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="es6、es7、es8、es9、es10新特性一览"><a href="#es6、es7、es8、es9、es10新特性一览" class="header-anchor">#</a> ES6、ES7、ES8、ES9、ES10新特性一览</h1> <blockquote><p>ES全称ECMAScript，ECMAScript是ECMA制定的标准化脚本语言。目前JavaScript使用的ECMAScript版本为<a href="https://ecma-international.org/publications/standards/Ecma-417.htm" target="_blank" rel="noopener noreferrer">ECMA-417<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。关于ECMA的最新资讯可以浏览 <a href="https://www.ecma-international.org/news/index.html" target="_blank" rel="noopener noreferrer">ECMA news<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>查看。</p></blockquote> <p>ECMA规范最终由<a href="https://github.com/tc39" target="_blank" rel="noopener noreferrer">TC39<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>敲定。TC39由包括浏览器厂商在内的各方组成，他们开会推动JavaScript提案沿着一条严格的发展道路前进。 从提案到入选ECMA规范主要有以下几个阶段：</p> <ul><li>Stage 0: strawman——最初想法的提交。</li> <li>Stage 1: proposal（提案）——由TC39至少一名成员倡导的正式提案文件，该文件包括API事例。</li> <li>Stage 2: draft（草案）——功能规范的初始版本，该版本包含功能规范的两个实验实现。</li> <li>Stage 3: candidate（候选）——提案规范通过审查并从厂商那里收集反馈</li> <li>Stage 4: finished（完成）——提案准备加入ECMAScript，但是到浏览器或者Nodejs中可能需要更长的时间。</li></ul> <h2 id="es6新特性（2015）"><a href="#es6新特性（2015）" class="header-anchor">#</a> ES6新特性（2015）</h2> <p>ES6的特性比较多，在 ES5 发布近 6 年（2009-11 至 2015-6）之后才将其标准化。两个发布版本之间时间跨度很大，所以ES6中的特性比较多。 在这里列举几个常用的：</p> <ul><li>类</li> <li>模块化</li> <li>箭头函数</li> <li>函数参数默认值</li> <li>模板字符串</li> <li>解构赋值</li> <li>延展操作符</li> <li>对象属性简写</li> <li>Promise</li> <li>Let与Const</li></ul> <h3 id="_1-类（class）"><a href="#_1-类（class）" class="header-anchor">#</a> 1.类（class）</h3> <p>对熟悉Java，object-c，c#等纯面向对象语言的开发者来说，都会对class有一种特殊的情怀。ES6 引入了class（类），让JavaScript的面向对象编程变得更加简单和易于理解。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  class Animal {
+    // 构造函数，实例化的时候将会被调用，如果不指定，那么会有一个不带参数的默认构造函数.
+    constructor(name,color) {
+      this.name = name;
+      this.color = color;
+    }
+    // toString 是原型对象上的属性
+    toString() {
+      console.log('name:' + this.name + ',color:' + this.color);
+
+    }
+  }
+
+ var animal = new Animal('dog','white');//实例化Animal
+ animal.toString();
+
+ console.log(animal.hasOwnProperty('name')); //true
+ console.log(animal.hasOwnProperty('toString')); // false
+ console.log(animal.__proto__.hasOwnProperty('toString')); // true
+
+ class Cat extends Animal {
+  constructor(action) {
+    // 子类必须要在constructor中指定super 函数，否则在新建实例的时候会报错.
+    // 如果没有置顶consructor,默认带super函数的constructor将会被添加、
+    super('cat','white');
+    this.action = action;
+  }
+  toString() {
+    console.log(super.toString());
+  }
+ }
+
+ var cat = new Cat('catch')
+ cat.toString();
+
+ // 实例cat 是 Cat 和 Animal 的实例，和Es5完全一致。
+ console.log(cat instanceof Cat); // true
+ console.log(cat instanceof Animal); // true
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><h3 id="_2-模块化-module"><a href="#_2-模块化-module" class="header-anchor">#</a> 2.模块化(Module)</h3> <p>ES5不支持原生的模块化，在ES6中模块作为重要的组成部分被添加进来。模块的功能主要由 export 和 import 组成。每一个模块都有自己单独的作用域，模块之间的相互调用关系是通过 export 来规定模块对外暴露的接口，通过import来引用其它模块提供的接口。同时还为模块创造了命名空间，防止函数的命名冲突。</p> <h4 id="导出-export"><a href="#导出-export" class="header-anchor">#</a> 导出(export)</h4> <p>ES6允许在一个模块中使用export来导出多个变量或函数。</p> <p><strong>导出变量</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//test.js
+export var name = 'Rainbow'
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><blockquote><p>心得：ES6不仅支持变量的导出，也支持常量的导出。 <code>export const sqrt = Math.sqrt;//导出常量</code></p></blockquote> <p>ES6将一个文件视为一个模块，上面的模块通过 export 向外输出了一个变量。一个模块也可以同时往外面输出多个变量。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> //test.js
+ var name = 'Rainbow';
+ var age = '24';
+ export {name, age};
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>导出函数</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// myModule.js
+export function myModule(someArg) {
+  return someArg;
+}  
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="导入-import"><a href="#导入-import" class="header-anchor">#</a> 导入(import)</h4> <p>定义好模块的输出以后就可以在另外一个模块通过import引用。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import {myModule} from 'myModule';// main.js
+import {name,age} from 'test';// test.js
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><blockquote><p>心得:一条import 语句可以同时导入默认函数和其它变量。<code>import defaultMethod, { otherMethod } from 'xxx.js';</code></p></blockquote> <h3 id="_3-箭头（arrow）函数"><a href="#_3-箭头（arrow）函数" class="header-anchor">#</a> 3.箭头（Arrow）函数</h3> <p>这是ES6中最令人激动的特性之一。<code>=&gt;</code>不只是关键字function的简写，它还带来了其它好处。箭头函数与包围它的代码共享同一个<code>this</code>,能帮你很好的解决this的指向问题。有经验的JavaScript开发者都熟悉诸如<code>var self = this;</code>或<code>var that = this</code>这种引用外围this的模式。但借助<code>=&gt;</code>，就不需要这种模式了。</p> <h4 id="箭头函数的结构"><a href="#箭头函数的结构" class="header-anchor">#</a> 箭头函数的结构</h4> <p>箭头函数的箭头=&gt;之前是一个空括号、单个的参数名、或用括号括起的多个参数名，而箭头之后可以是一个表达式（作为函数的返回值），或者是用花括号括起的函数体（需要自行通过return来返回值，否则返回的是undefined）。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 箭头函数的例子
+()=&gt;1
+v=&gt;v+1
+(a,b)=&gt;a+b
+()=&gt;{
+    alert(&quot;foo&quot;);
+}
+e=&gt;{
+    if (e == 0){
+        return 0;
+    }
+    return 1000/e;
+}
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><blockquote><p>心得：不论是箭头函数还是bind，每次被执行都返回的是一个新的函数引用，因此如果你还需要函数的引用去做一些别的事情（譬如卸载监听器），那么你必须自己保存这个引用。</p></blockquote> <h4 id="卸载监听器时的陷阱"><a href="#卸载监听器时的陷阱" class="header-anchor">#</a> 卸载监听器时的陷阱</h4> <blockquote><p><strong>错误的做法</strong></p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>class PauseMenu extends React.Component{
+    componentWillMount(){
+        AppStateIOS.addEventListener('change', this.onAppPaused.bind(this));
+    }
+    componentWillUnmount(){
+        AppStateIOS.removeEventListener('change', this.onAppPaused.bind(this));
+    }
+    onAppPaused(event){
+    }
+}
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><blockquote><p><strong>正确的做法</strong></p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>class PauseMenu extends React.Component{
+    constructor(props){
+        super(props);
+        this._onAppPaused = this.onAppPaused.bind(this);
+    }
+    componentWillMount(){
+        AppStateIOS.addEventListener('change', this._onAppPaused);
+    }
+    componentWillUnmount(){
+        AppStateIOS.removeEventListener('change', this._onAppPaused);
+    }
+    onAppPaused(event){
+    }
+}
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>除上述的做法外，我们还可以这样做：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>class PauseMenu extends React.Component{
+    componentWillMount(){
+        AppStateIOS.addEventListener('change', this.onAppPaused);
+    }
+    componentWillUnmount(){
+        AppStateIOS.removeEventListener('change', this.onAppPaused);
+    }
+    onAppPaused = (event) =&gt; {
+        //把函数直接作为一个arrow function的属性来定义，初始化的时候就绑定好了this指针
+    }
+}
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><blockquote><p>需要注意的是：不论是bind还是箭头函数，每次被执行都返回的是一个新的函数引用，因此如果你还需要函数的引用去做一些别的事情（譬如卸载监听器），那么你必须自己保存这个引用。</p></blockquote> <h3 id="_4-函数参数默认值"><a href="#_4-函数参数默认值" class="header-anchor">#</a> 4.<a href="https://link.juejin.im/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FFunctions%2Fdefault_parameters" target="_blank" rel="noopener noreferrer">函数参数默认值<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>ES6支持在定义函数的时候为其设置默认值：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function foo(height = 50, color = 'red')
+{
+    // ...
+}
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><blockquote><p>不使用默认值：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>function foo(height, color)
+{
+    var height = height || 50;
+    var color = color || 'red';
+    //...
+}
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>这样写一般没问题，但当<code>参数的布尔值为false</code>时，就会有问题了。比如，我们这样调用foo函数：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>foo(0, &quot;&quot;)
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>因为<code>0的布尔值为false</code>，这样height的取值将是50。同理color的取值为‘red’。</p> <p>所以说，<code>函数参数默认值</code>不仅能是代码变得更加简洁而且能规避一些问题。</p> <h3 id="_5-模板字符串"><a href="#_5-模板字符串" class="header-anchor">#</a> 5.模板字符串</h3> <p>ES6支持<code>模板字符串</code>，使得字符串的拼接更加的简洁、直观。</p> <blockquote><p>不使用模板字符串：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var name = 'Your name is ' + first + ' ' + last + '.'
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>使用模板字符串：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var name = `Your name is ${first} ${last}.`
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>在ES6中通过<code>${}</code>就可以完成字符串的拼接，只需要将变量放在大括号之中。</p> <h3 id="_6-解构赋值"><a href="#_6-解构赋值" class="header-anchor">#</a> 6.<a href="https://link.juejin.im/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FOperators%2FDestructuring_assignment" target="_blank" rel="noopener noreferrer">解构赋值<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>解构赋值语法是JavaScript的一种表达式，可以方便的从数组或者对象中快速提取值赋给定义的变量。</p> <h4 id="获取数组中的值"><a href="#获取数组中的值" class="header-anchor">#</a> 获取数组中的值</h4> <p>从数组中获取值并赋值到变量中，变量的顺序与数组中对象顺序对应。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var foo = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;];
+
+var [one, two, three] = foo;
+console.log(one); // &quot;one&quot;
+console.log(two); // &quot;two&quot;
+console.log(three); // &quot;three&quot;
+
+//如果你要忽略某些值，你可以按照下面的写法获取你想要的值
+var [first, , , last] = foo;
+console.log(first); // &quot;one&quot;
+console.log(last); // &quot;four&quot;
+
+//你也可以这样写
+var a, b; //先声明变量
+
+[a, b] = [1, 2];
+console.log(a); // 1
+console.log(b); // 2
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>如果没有从数组中的获取到值，你可以为变量设置一个默认值。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var a, b;
+
+[a=5, b=7] = [1];
+console.log(a); // 1
+console.log(b); // 7
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>通过解构赋值可以方便的交换两个变量的值。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var a = 1;
+var b = 3;
+
+[a, b] = [b, a];
+console.log(a); // 3
+console.log(b); // 1
+
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h4 id="获取对象中的值"><a href="#获取对象中的值" class="header-anchor">#</a> 获取对象中的值</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>const student = {
+  name:'Ming',
+  age:'18',
+  city:'Shanghai'  
+};
+
+const {name,age,city} = student;
+console.log(name); // &quot;Ming&quot;
+console.log(age); // &quot;18&quot;
+console.log(city); // &quot;Shanghai&quot;
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="_7-延展操作符-spread-operator"><a href="#_7-延展操作符-spread-operator" class="header-anchor">#</a> 7.延展操作符(Spread operator)</h3> <p><code>延展操作符...</code>可以在函数调用/数组构造时, 将数组表达式或者string在语法层面展开；还可以在构造对象时, 将对象表达式按key-value的方式展开。</p> <h4 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h4> <blockquote><p>函数调用：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>myFunction(...iterableObj);
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>数组构造或字符串：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[...iterableObj, '4', ...'hello', 6];
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>构造对象时,进行克隆或者属性拷贝（ECMAScript 2018规范新增特性）：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>let objClone = { ...obj };
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="应用场景"><a href="#应用场景" class="header-anchor">#</a> 应用场景</h4> <blockquote><p>在函数调用时使用延展操作符</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>function sum(x, y, z) {
+  return x + y + z;
+}
+const numbers = [1, 2, 3];
+
+//不使用延展操作符
+console.log(sum.apply(null, numbers));
+
+//使用延展操作符
+console.log(sum(...numbers));// 6
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><blockquote><p>构造数组</p></blockquote> <p>没有展开语法的时候，只能组合使用 push，splice，concat 等方法，来将已有数组元素变成新数组的一部分。有了展开语法, 构造新数组会变得更简单、更优雅：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const stuendts = ['Jine','Tom']; 
+const persons = ['Tony',... stuendts,'Aaron','Anna'];
+conslog.log(persions)// [&quot;Tony&quot;, &quot;Jine&quot;, &quot;Tom&quot;, &quot;Aaron&quot;, &quot;Anna&quot;]
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>和参数列表的展开类似, <code>...</code> 在构造字数组时, 可以在任意位置多次使用。</p> <blockquote><p>数组拷贝</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var arr = [1, 2, 3];
+var arr2 = [...arr]; // 等同于 arr.slice()
+arr2.push(4); 
+console.log(arr2)//[1, 2, 3, 4]
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>展开语法和 Object.assign() 行为一致, 执行的都是浅拷贝(只遍历一层)。</p> <blockquote><p>连接多个数组</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var arr1 = [0, 1, 2];
+var arr2 = [3, 4, 5];
+var arr3 = [...arr1, ...arr2];// 将 arr2 中所有元素附加到 arr1 后面并返回
+//等同于
+var arr4 = arr1.concat(arr2);
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="在ecmascript-2018中延展操作符增加了对对象的支持"><a href="#在ecmascript-2018中延展操作符增加了对对象的支持" class="header-anchor">#</a> 在ECMAScript 2018中延展操作符增加了对对象的支持</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>var obj1 = { foo: 'bar', x: 42 };
+var obj2 = { foo: 'baz', y: 13 };
+
+var clonedObj = { ...obj1 };
+// 克隆后的对象: { foo: &quot;bar&quot;, x: 42 }
+
+var mergedObj = { ...obj1, ...obj2 };
+// 合并后的对象: { foo: &quot;baz&quot;, x: 42, y: 13 }
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h4 id="在react中的应用"><a href="#在react中的应用" class="header-anchor">#</a> 在React中的应用</h4> <p>通常我们在封装一个组件时，会对外公开一些 props 用于实现功能。大部分情况下在外部使用都应显示的传递 props 。但是当传递大量的props时，会非常繁琐，这时我们可以使用 <code>...(延展操作符,用于取出参数对象的所有可遍历属性)</code> 来进行传递。</p> <h4 id="一般情况下我们应该这样写"><a href="#一般情况下我们应该这样写" class="header-anchor">#</a> 一般情况下我们应该这样写</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;CustomComponent name ='Jine' age ={21} /&gt;
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>使用 ... ，等同于上面的写法</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>const params = {
+	name: 'Jine',
+	age: 21
+}
+&lt;CustomComponent {...params} /&gt;
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><blockquote><p>配合解构赋值避免传入一些不需要的参数</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var params = {
+	name: '123',
+	title: '456',
+	type: 'aaa'
+}
+
+var { type, ...other } = params;
+
+&lt;CustomComponent type='normal' number={2} {...other} /&gt;
+//等同于
+&lt;CustomComponent type='normal' number={2} name='123' title='456' /&gt;
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="_8-对象属性简写"><a href="#_8-对象属性简写" class="header-anchor">#</a> 8.对象属性简写</h3> <p>在ES6中允许我们在设置一个对象的属性的时候不指定属性名。</p> <blockquote><p>不使用ES6</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>const name='Ming',age='18',city='Shanghai';
+   
+const student = {
+    name:name,
+    age:age,
+    city:city
+};
+console.log(student);//{name: &quot;Ming&quot;, age: &quot;18&quot;, city: &quot;Shanghai&quot;}
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>对象中必须包含属性和值，显得非常冗余。</p> <blockquote><p>使用ES6</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>const name='Ming',age='18',city='Shanghai';
+  
+const student = {
+    name,
+    age,
+    city
+};
+console.log(student);//{name: &quot;Ming&quot;, age: &quot;18&quot;, city: &quot;Shanghai&quot;}
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>对象中直接写变量，非常简洁。</p> <h3 id="_9-promise"><a href="#_9-promise" class="header-anchor">#</a> 9.<a href="https://link.juejin.im/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FGuide%2FUsing_promises" target="_blank" rel="noopener noreferrer">Promise<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>Promise 是异步编程的一种解决方案，比传统的解决方案callback更加的优雅。它最早由社区提出和实现的，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。</p> <blockquote><p>不使用ES6</p></blockquote> <p>嵌套两个setTimeout回调函数：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>setTimeout(function()
+{
+    console.log('Hello'); // 1秒后输出&quot;Hello&quot;
+    setTimeout(function()
+    {
+        console.log('Hi'); // 2秒后输出&quot;Hi&quot;
+    }, 1000);
+}, 1000);
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><blockquote><p>使用ES6</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var waitSecond = new Promise(function(resolve, reject)
+{
+    setTimeout(resolve, 1000);
+});
+
+waitSecond
+    .then(function()
+    {
+      console.log(&quot;Hello&quot;); // 1秒后输出&quot;Hello&quot;
+      return waitSecond;
+    })
+    .then(function()
+    {
+        console.log(&quot;Hi&quot;); // 2秒后输出&quot;Hi&quot;
+    });
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>上面的的代码使用两个then来进行异步编程串行化，避免了回调地狱：</p> <h3 id="_10-支持let与const"><a href="#_10-支持let与const" class="header-anchor">#</a> 10.支持let与const</h3> <p>在之前JS是没有块级作用域的，const与let填补了这方便的空白，const与let都是块级作用域。</p> <blockquote><p>使用var定义的变量为函数级作用域：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  var a = 10;
+}
+
+console.log(a); // 输出10
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><blockquote><p>使用let与const定义的变量为块级作用域：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  let a = 10;
+}
+
+console.log(a); //-1 or Error“ReferenceError: a is not defined”
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="es7新特性（2016）"><a href="#es7新特性（2016）" class="header-anchor">#</a> ES7新特性（2016）</h2> <p>ES2016添加了两个小的特性来说明标准化过程：</p> <ul><li>数组includes()方法，用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回true，否则返回false。</li> <li>a ** b指数运算符，它与 Math.pow(a, b)相同。</li></ul> <h3 id="_1-array-prototype-includes"><a href="#_1-array-prototype-includes" class="header-anchor">#</a> 1.Array.prototype.includes()</h3> <p><code>includes()</code> 函数用来判断一个数组是否包含一个指定的值，如果包含则返回 <code>true</code>，否则返回<code>false</code>。</p> <p><code>includes</code> 函数与 <code>indexOf</code> 函数很相似，下面两个表达式是等价的：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>arr.includes(x)
+arr.indexOf(x) &gt;= 0
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>接下来我们来判断数字中是否包含某个元素：</p> <blockquote><p>在ES7之前的做法</p></blockquote> <p>使用<code>indexOf()</code>验证数组中是否存在某个元素，这时需要根据返回值是否为-1来判断：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr = ['react', 'angular', 'vue'];
+
+if (arr.indexOf('react') !== -1)
+{
+    console.log('react存在');
+}
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><blockquote><p>使用ES7的includes()</p></blockquote> <p>使用includes()验证数组中是否存在某个元素，这样更加直观简单：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr = ['react', 'angular', 'vue'];
+
+if (arr.includes('react'))
+{
+    console.log('react存在');
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_2-指数操作符"><a href="#_2-指数操作符" class="header-anchor">#</a> 2.指数操作符</h3> <p>在ES7中引入了指数运算符<code>**</code>，<code>**</code>具有与<code>Math.pow(..)</code>等效的计算结果。</p> <blockquote><p>不使用指数操作符</p></blockquote> <p>使用自定义的递归函数calculateExponent或者Math.pow()进行指数运算：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function calculateExponent(base, exponent)
+{
+    if (exponent === 1)
+    {
+        return base;
+    }
+    else
+    {
+        return base * calculateExponent(base, exponent - 1);
+    }
+}
+
+console.log(calculateExponent(2, 10)); // 输出1024
+console.log(Math.pow(2, 10)); // 输出1024
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><blockquote><p>使用指数操作符</p></blockquote> <p>使用指数运算符**，就像+、-等操作符一样：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>console.log(2**10);// 输出1024
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="es8新特性（2017）"><a href="#es8新特性（2017）" class="header-anchor">#</a> ES8新特性（2017）</h2> <ul><li>async/await</li> <li><code>Object.values()</code></li> <li><code>Object.entries()</code></li> <li>String padding: <code>padStart()</code>和<code>padEnd()</code>，填充字符串达到当前长度</li> <li>函数参数列表结尾允许逗号</li> <li><code>Object.getOwnPropertyDescriptors()</code></li> <li><code>ShareArrayBuffer</code>和<code>Atomics</code>对象，用于从共享内存位置读取和写入</li></ul> <h3 id="_1-async-await"><a href="#_1-async-await" class="header-anchor">#</a> 1.async/await</h3> <p>ES2018引入异步迭代器（asynchronous iterators），这就像常规迭代器，除了<code>next()</code>方法返回一个Promise。因此<code>await</code>可以和<code>for...of</code>循环一起使用，以串行的方式运行异步操作。例如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>async function process(array) {
+  for await (let i of array) {
+    doSomething(i);
+  }
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_2-object-values"><a href="#_2-object-values" class="header-anchor">#</a> 2.Object.values()</h3> <p><code>Object.values()</code>是一个与<code>Object.keys()</code>类似的新函数，但返回的是Object自身属性的所有值，不包括继承的值。</p> <p>假设我们要遍历如下对象<code>obj</code>的所有值：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const obj = {a: 1, b: 2, c: 3};
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><blockquote><p>不使用Object.values() :ES7</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>const vals=Object.keys(obj).map(key=&gt;obj[key]);
+console.log(vals);//[1, 2, 3]
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>使用Object.values() :ES8</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>const values=Object.values(obj1);
+console.log(values);//[1, 2, 3]
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>从上述代码中可以看出<code>Object.values()</code>为我们省去了遍历key，并根据这些key获取value的步骤。</p> <h3 id="_3-object-entries"><a href="#_3-object-entries" class="header-anchor">#</a> 3.Object.entries()</h3> <p><code>Object.entries()</code>函数返回一个给定对象自身可枚举属性的键值对的数组。</p> <p>接下来我们来遍历上文中的<code>obj</code>对象的所有属性的key和value：</p> <blockquote><p>不使用Object.entries() :ES7</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>Object.keys(obj).forEach(key=&gt;{
+	console.log('key:'+key+' value:'+obj[key]);
+})
+//key:a value:1
+//key:b value:2
+//key:c value:3
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><blockquote><p>使用Object.entries() :ES8</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>for(let [key,value] of Object.entries(obj1)){
+	console.log(`key: ${key} value:${value}`)
+}
+//key:a value:1
+//key:b value:2
+//key:c value:3
+
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="_4-string-padding"><a href="#_4-string-padding" class="header-anchor">#</a> 4.String padding</h3> <p>在ES8中String新增了两个实例函数<code>String.prototype.padStart</code>和<code>String.prototype.padEnd</code>，允许将空字符串或其他字符串添加到原始字符串的开头或结尾。</p> <blockquote><p>String.padStart(targetLength,[padString])</p></blockquote> <ul><li>targetLength:当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。</li> <li>padString:(可选)填充字符串。如果字符串太长，使填充后的字符串长度超过了目标长度，则只保留最左侧的部分，其他部分会被截断，此参数的缺省值为 &quot; &quot;。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>console.log('0.0'.padStart(4,'10')) //10.0
+console.log('0.0'.padStart(20))// 0.00    
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>String.padEnd(targetLength,padString])</p></blockquote> <ul><li>targetLength:当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。</li> <li>padString:(可选) 填充字符串。如果字符串太长，使填充后的字符串长度超过了目标长度，则只保留最左侧的部分，其他部分会被截断，此参数的缺省值为 &quot; &quot;；</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>console.log('0.0'.padEnd(4,'0')) //0.00    
+console.log('0.0'.padEnd(10,'0'))//0.00000000
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_5-函数参数列表结尾允许逗号"><a href="#_5-函数参数列表结尾允许逗号" class="header-anchor">#</a> 5.函数参数列表结尾允许逗号</h3> <p>主要作用是方便使用git进行多人协作开发时修改同一个函数减少不必要的行变更。</p> <h3 id="_6-object-getownpropertydescriptors"><a href="#_6-object-getownpropertydescriptors" class="header-anchor">#</a> 6.Object.getOwnPropertyDescriptors()</h3> <p><code>Object.getOwnPropertyDescriptors()</code>函数用来获取一个对象的所有自身属性的描述符,如果没有任何自身属性，则返回空对象。</p> <blockquote><p>函数原型：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>Object.getOwnPropertyDescriptors(obj)
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>返回<code>obj</code>对象的所有自身属性的描述符，如果没有任何自身属性，则返回空对象。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const obj2 = {
+	name: 'Jine',
+	get age() { return '18' }
+};
+Object.getOwnPropertyDescriptors(obj2)
+// {
+//   age: {
+//     configurable: true,
+//     enumerable: true,
+//     get: function age(){}, //the getter function
+//     set: undefined
+//   },
+//   name: {
+//     configurable: true,
+//     enumerable: true,
+//		value:&quot;Jine&quot;,
+//		writable:true
+//   }
+// }
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="_7-sharedarraybuffer对象"><a href="#_7-sharedarraybuffer对象" class="header-anchor">#</a> 7.SharedArrayBuffer对象</h3> <p>SharedArrayBuffer 对象用来表示一个通用的，固定长度的原始二进制数据缓冲区，类似于 ArrayBuffer 对象，它们都可以用来在共享内存（shared memory）上创建视图。与 ArrayBuffer 不同的是，SharedArrayBuffer 不能被分离。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * 
+ * @param {*} length 所创建的数组缓冲区的大小，以字节(byte)为单位。  
+ * @returns {SharedArrayBuffer} 一个大小指定的新 SharedArrayBuffer 对象。其内容被初始化为 0。
+ */
+new SharedArrayBuffer(length)
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_8-atomics对象"><a href="#_8-atomics对象" class="header-anchor">#</a> 8.Atomics对象</h3> <p>Atomics 对象提供了一组静态方法用来对 SharedArrayBuffer 对象进行原子操作。</p> <p>这些原子操作属于 Atomics 模块。与一般的全局对象不同，Atomics 不是构造函数，因此不能使用 new 操作符调用，也不能将其当作函数直接调用。Atomics 的所有属性和方法都是静态的（与 Math 对象一样）。</p> <p>多个共享内存的线程能够同时读写同一位置上的数据。原子操作会确保正在读或写的数据的值是符合预期的，即下一个原子操作一定会在上一个原子操作结束后才会开始，其操作过程不会中断。</p> <ul><li>Atomics.add()</li></ul> <blockquote><p>将指定位置上的数组元素与给定的值相加，并返回相加前该元素的值。</p></blockquote> <ul><li>Atomics.and()</li></ul> <blockquote><p>将指定位置上的数组元素与给定的值相与，并返回与操作前该元素的值。</p></blockquote> <ul><li>Atomics.compareExchange()</li></ul> <blockquote><p>如果数组中指定的元素与给定的值相等，则将其更新为新的值，并返回该元素原先的值。</p></blockquote> <ul><li>Atomics.exchange()</li></ul> <blockquote><p>将数组中指定的元素更新为给定的值，并返回该元素更新前的值。</p></blockquote> <ul><li>Atomics.load()</li></ul> <blockquote><p>返回数组中指定元素的值。</p></blockquote> <ul><li>Atomics.or()</li></ul> <blockquote><p>将指定位置上的数组元素与给定的值相或，并返回或操作前该元素的值。</p></blockquote> <ul><li>Atomics.store()</li></ul> <blockquote><p>将数组中指定的元素设置为给定的值，并返回该值。</p></blockquote> <ul><li>Atomics.sub()</li></ul> <blockquote><p>将指定位置上的数组元素与给定的值相减，并返回相减前该元素的值。</p></blockquote> <ul><li>Atomics.xor()</li></ul> <blockquote><p>将指定位置上的数组元素与给定的值相异或，并返回异或操作前该元素的值。</p></blockquote> <p>wait() 和 wake() 方法采用的是 Linux 上的 futexes 模型（fast user-space mutex，快速用户空间互斥量），可以让进程一直等待直到某个特定的条件为真，主要用于实现阻塞。</p> <ul><li>Atomics.wait()</li></ul> <blockquote><p>检测数组中某个指定位置上的值是否仍然是给定值，是则保持挂起直到被唤醒或超时。返回值为 &quot;ok&quot;、&quot;not-equal&quot; 或 &quot;time-out&quot;。调用时，如果当前线程不允许阻塞，则会抛出异常（大多数浏览器都不允许在主线程中调用 wait()）。</p></blockquote> <ul><li>Atomics.wake()</li></ul> <blockquote><p>唤醒等待队列中正在数组指定位置的元素上等待的线程。返回值为成功唤醒的线程数量。</p></blockquote> <ul><li>Atomics.isLockFree(size)</li></ul> <blockquote><p>可以用来检测当前系统是否支持硬件级的原子操作。对于指定大小的数组，如果当前系统支持硬件级的原子操作，则返回 true；否则就意味着对于该数组，Atomics 对象中的各原子操作都只能用锁来实现。此函数面向的是技术专家。--&gt;</p></blockquote> <h2 id="es9新特性（2018）"><a href="#es9新特性（2018）" class="header-anchor">#</a> ES9新特性（2018）</h2> <ul><li>异步迭代</li> <li>Promise.finally()</li> <li>Rest/Spread 属性</li> <li><a href="http://esnext.justjavac.com/proposal/regexp-named-groups.html" target="_blank" rel="noopener noreferrer">正则表达式命名捕获组<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>（Regular Expression Named Capture Groups）</li> <li><a href="https://segmentfault.com/a/1190000006824133" target="_blank" rel="noopener noreferrer">正则表达式反向断言<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>（lookbehind）</li> <li>正则表达式dotAll模式</li> <li><a href="https://juejin.im/post/5b2a186cf265da596d04a648#heading-1" target="_blank" rel="noopener noreferrer">正则表达式 Unicode 转义<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://juejin.im/post/5b2a186cf265da596d04a648#heading-1" target="_blank" rel="noopener noreferrer">非转义序列的模板字符串<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <h3 id="_1-异步迭代"><a href="#_1-异步迭代" class="header-anchor">#</a> 1.异步迭代</h3> <p>在<code>async/await</code>的某些时刻，你可能尝试在同步循环中调用异步函数。例如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>async function process(array) {
+  for (let i of array) {
+    await doSomething(i);
+  }
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>这段代码不会正常运行，下面这段同样也不会：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>async function process(array) {
+  array.forEach(async i =&gt; {
+    await doSomething(i);
+  });
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>这段代码中，循环本身依旧保持同步，并在在内部异步函数之前全部调用完成。</p> <p>ES2018引入异步迭代器（asynchronous iterators），这就像常规迭代器，除了<code>next()</code>方法返回一个Promise。因此<code>await</code>可以和<code>for...of</code>循环一起使用，以串行的方式运行异步操作。例如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>async function process(array) {
+  for await (let i of array) {
+    doSomething(i);
+  }
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_2-promise-finally"><a href="#_2-promise-finally" class="header-anchor">#</a> 2.Promise.finally()</h3> <p>一个Promise调用链要么成功到达最后一个<code>.then()</code>，要么失败触发<code>.catch()</code>。在某些情况下，你想要在无论Promise运行成功还是失败，运行相同的代码，例如清除，删除对话，关闭数据库连接等。</p> <p><code>.finally()</code>允许你指定最终的逻辑：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function doSomething() {
+  doSomething1()
+  .then(doSomething2)
+  .then(doSomething3)
+  .catch(err =&gt; {
+    console.log(err);
+  })
+  .finally(() =&gt; {
+    // finish here!
+  });
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="_3-rest-spread-属性"><a href="#_3-rest-spread-属性" class="header-anchor">#</a> 3.Rest/Spread 属性</h3> <p>ES2015引入了<a href="https://link.juejin.im/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FFunctions%2FRest_parameters" target="_blank" rel="noopener noreferrer">Rest参数<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>和<a href="https://link.juejin.im/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FOperators%2FSpread_syntax" target="_blank" rel="noopener noreferrer">扩展运算符<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。三个点（...）仅用于数组。Rest参数语法允许我们将一个不定数量的参数表示为一个数组。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>restParam(1, 2, 3, 4, 5);
+
+function restParam(p1, p2, ...p3) {
+  // p1 = 1
+  // p2 = 2
+  // p3 = [3, 4, 5]
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>展开操作符以相反的方式工作，将数组转换成可传递给函数的单独参数。例如<code>Math.max()</code>返回给定数字中的最大值：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const values = [99, 100, -1, 48, 16];
+console.log( Math.max(...values) ); // 100
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>ES2018为对象解构提供了和数组一样的Rest参数（）和展开操作符，一个简单的例子：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const myObject = {
+  a: 1,
+  b: 2,
+  c: 3
+};
+
+const { a, ...x } = myObject;
+// a = 1
+// x = { b: 2, c: 3 }
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>或者你可以使用它给函数传递参数：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>restParam({
+  a: 1,
+  b: 2,
+  c: 3
+});
+
+function restParam({ a, ...x }) {
+  // a = 1
+  // x = { b: 2, c: 3 }
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>跟数组一样，Rest参数只能在声明的结尾处使用。此外，它只适用于每个对象的顶层，如果对象中嵌套对象则无法适用。</p> <p>扩展运算符可以在其他对象内使用，例如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const obj1 = { a: 1, b: 2, c: 3 };
+const obj2 = { ...obj1, z: 26 };
+// obj2 is { a: 1, b: 2, c: 3, z: 26 }
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>可以使用扩展运算符拷贝一个对象，像是这样<code>obj2 = {...obj1}</code>，但是 <strong>这只是一个对象的浅拷贝</strong>。另外，如果一个对象A的属性是对象B，那么在克隆后的对象cloneB中，该属性指向对象B。</p> <h3 id="_4-正则表达式命名捕获组"><a href="#_4-正则表达式命名捕获组" class="header-anchor">#</a> 4.正则表达式命名捕获组</h3> <p>JavaScript正则表达式可以返回一个匹配的对象——一个包含匹配字符串的类数组，例如：以<code>YYYY-MM-DD</code>的格式解析日期：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const
+  reDate = /([0-9]{4})-([0-9]{2})-([0-9]{2})/,
+  match  = reDate.exec('2018-04-30'),
+  year   = match[1], // 2018
+  month  = match[2], // 04
+  day    = match[3]; // 30
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>这样的代码很难读懂，并且改变正则表达式的结构有可能改变匹配对象的索引。</p> <p>ES2018允许命名捕获组使用符号<code>?&lt;name&gt;</code>，在打开捕获括号<code>(</code>后立即命名，示例如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const
+  reDate = /(?&lt;year&gt;[0-9]{4})-(?&lt;month&gt;[0-9]{2})-(?&lt;day&gt;[0-9]{2})/,
+  match  = reDate.exec('2018-04-30'),
+  year   = match.groups.year,  // 2018
+  month  = match.groups.month, // 04
+  day    = match.groups.day;   // 30
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>任何匹配失败的命名组都将返回<code>undefined</code>。</p> <p>命名捕获也可以使用在<code>replace()</code>方法中。例如将日期转换为美国的 MM-DD-YYYY 格式：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const
+  reDate = /(?&lt;year&gt;[0-9]{4})-(?&lt;month&gt;[0-9]{2})-(?&lt;day&gt;[0-9]{2})/,
+  d      = '2018-04-30',
+  usDate = d.replace(reDate, '$&lt;month&gt;-$&lt;day&gt;-$&lt;year&gt;');
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_5-正则表达式反向断言"><a href="#_5-正则表达式反向断言" class="header-anchor">#</a> 5.正则表达式反向断言</h3> <p>目前JavaScript在正则表达式中支持先行断言（lookahead）。这意味着匹配会发生，但不会有任何捕获，并且断言没有包含在整个匹配字段中。例如从价格中捕获货币符号：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const
+  reLookahead = /\D(?=\d+)/,
+  match       = reLookahead.exec('$123.89');
+
+console.log( match[0] ); // $
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>ES2018引入以相同方式工作但是匹配前面的反向断言（lookbehind），这样我就可以忽略货币符号，单纯的捕获价格的数字：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const
+  reLookbehind = /(?&lt;=\D)\d+/,
+  match        = reLookbehind.exec('$123.89');
+
+console.log( match[0] ); // 123.89
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>以上是 <strong>肯定反向断言</strong>，非数字<code>\D</code>必须存在。同样的，还存在 <strong>否定反向断言</strong>，表示一个值必须不存在，例如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const
+  reLookbehindNeg = /(?&lt;!\D)\d+/,
+  match           = reLookbehind.exec('$123.89');
+
+console.log( match[0] ); // null
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_6-正则表达式dotall模式"><a href="#_6-正则表达式dotall模式" class="header-anchor">#</a> 6.正则表达式dotAll模式</h3> <p>正则表达式中点<code>.</code>匹配除回车外的任何单字符，标记<code>s</code>改变这种行为，允许行终止符的出现，例如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/hello.world/.test('hello\nworld');  // false
+/hello.world/s.test('hello\nworld'); // true
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_7-正则表达式-unicode-转义"><a href="#_7-正则表达式-unicode-转义" class="header-anchor">#</a> 7.正则表达式 Unicode 转义</h3> <p>到目前为止，在正则表达式中本地访问 Unicode 字符属性是不被允许的。ES2018添加了 Unicode 属性转义——形式为<code>\p{...}</code>和<code>\P{...}</code>，在正则表达式中使用标记 <code>u</code> (unicode) 设置，在<code>\p</code>块儿内，可以以键值对的方式设置需要匹配的属性而非具体内容。例如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const reGreekSymbol = /\p{Script=Greek}/u;
+reGreekSymbol.test('π'); // true
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>此特性可以避免使用特定 Unicode 区间来进行内容类型判断，提升可读性和可维护性。</p> <h3 id="_8-非转义序列的模板字符串"><a href="#_8-非转义序列的模板字符串" class="header-anchor">#</a> 8.非转义序列的模板字符串</h3> <p>之前，<code>\u</code>开始一个 unicode 转义，<code>\x</code>开始一个十六进制转义，<code>\</code>后跟一个数字开始一个八进制转义。这使得创建特定的字符串变得不可能，例如Windows文件路径 <code>C:\uuu\xxx\111</code>。更多细节参考<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings" target="_blank" rel="noopener noreferrer">模板字符串<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <h2 id="es10新特性（2019）"><a href="#es10新特性（2019）" class="header-anchor">#</a> ES10新特性（2019）</h2> <ul><li>行分隔符（U + 2028）和段分隔符（U + 2029）符号现在允许在字符串文字中，与JSON匹配</li> <li>更加友好的 JSON.stringify</li> <li>新增了Array的<code>flat()</code>方法和<code>flatMap()</code>方法</li> <li>新增了String的<code>trimStart()</code>方法和<code>trimEnd()</code>方法</li> <li><code>Object.fromEntries()</code></li> <li><code>Symbol.prototype.description</code></li> <li><code>String.prototype.matchAll</code></li> <li><code>Function.prototype.toString()</code>现在返回精确字符，包括空格和注释</li> <li>简化<code>try {} catch {}</code>,修改 <code>catch</code> 绑定</li> <li>新的基本数据类型<code>BigInt</code></li> <li>globalThis</li> <li>import()</li> <li>Legacy RegEx</li> <li>私有的实例方法和访问器</li></ul> <h3 id="_1-行分隔符（u-2028）和段分隔符（u-2029）符号现在允许在字符串文字中，与json匹配"><a href="#_1-行分隔符（u-2028）和段分隔符（u-2029）符号现在允许在字符串文字中，与json匹配" class="header-anchor">#</a> 1.行分隔符（U + 2028）和段分隔符（U + 2029）符号现在允许在字符串文字中，与JSON匹配</h3> <p>以前，这些符号在字符串文字中被视为行终止符，因此使用它们会导致SyntaxError异常。</p> <h3 id="_2-更加友好的-json-stringify"><a href="#_2-更加友好的-json-stringify" class="header-anchor">#</a> 2.更加友好的 JSON.stringify</h3> <p>如果输入 Unicode 格式但是超出范围的字符，在原先JSON.stringify返回格式错误的Unicode字符串。现在实现了一个改变JSON.stringify的<a href="https://github.com/tc39/proposal-well-formed-stringify" target="_blank" rel="noopener noreferrer">第3阶段提案<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，因此它为其输出转义序列，使其成为有效Unicode（并以UTF-8表示）</p> <h3 id="_3-新增了array的flat-方法和flatmap-方法"><a href="#_3-新增了array的flat-方法和flatmap-方法" class="header-anchor">#</a> 3.新增了Array的<code>flat()</code>方法和<code>flatMap()</code>方法</h3> <p><code>flat()</code>和<code>flatMap()</code>本质上就是是归纳（reduce） 与 合并（concat）的操作。</p> <h4 id="array-prototype-flat"><a href="#array-prototype-flat" class="header-anchor">#</a> Array.prototype.flat()</h4> <p><code>flat()</code> 方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。</p> <ul><li><code>flat()</code>方法最基本的作用就是数组降维</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var arr1 = [1, 2, [3, 4]];
+arr1.flat(); 
+// [1, 2, 3, 4]
+
+var arr2 = [1, 2, [3, 4, [5, 6]]];
+arr2.flat();
+// [1, 2, 3, 4, [5, 6]]
+
+var arr3 = [1, 2, [3, 4, [5, 6]]];
+arr3.flat(2);
+// [1, 2, 3, 4, 5, 6]
+
+//使用 Infinity 作为深度，展开任意深度的嵌套数组
+arr3.flat(Infinity); 
+// [1, 2, 3, 4, 5, 6]
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><ul><li>其次，还可以利用<code>flat()</code>方法的特性来去除数组的空项</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var arr4 = [1, 2, , 4, 5];
+arr4.flat();
+// [1, 2, 4, 5]
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="array-prototype-flatmap"><a href="#array-prototype-flatmap" class="header-anchor">#</a> Array.prototype.flatMap()</h4> <p><code>flatMap()</code> 方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。它与 map 和 深度值1的 flat 几乎相同，但 flatMap 通常在合并成一种方法的效率稍微高一些。 这里我们拿map方法与flatMap方法做一个比较。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var arr1 = [1, 2, 3, 4];
+
+arr1.map(x =&gt; [x * 2]); 
+// [[2], [4], [6], [8]]
+
+arr1.flatMap(x =&gt; [x * 2]);
+// [2, 4, 6, 8]
+
+// 只会将 flatMap 中的函数返回的数组 “压平” 一层
+arr1.flatMap(x =&gt; [[x * 2]]);
+// [[2], [4], [6], [8]]
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="_4-新增了string的trimstart-方法和trimend-方法"><a href="#_4-新增了string的trimstart-方法和trimend-方法" class="header-anchor">#</a> 4.新增了String的<code>trimStart()</code>方法和<code>trimEnd()</code>方法</h3> <p>新增的这两个方法很好理解，分别去除字符串首尾空白字符，这里就不用例子说声明了。</p> <h3 id="_5-object-fromentries"><a href="#_5-object-fromentries" class="header-anchor">#</a> 5.<code>Object.fromEntries()</code></h3> <p><code>Object.entries()</code>方法的作用是返回一个给定对象自身可枚举属性的键值对数组，其排列与使用 for...in 循环遍历该对象时返回的顺序一致（区别在于 for-in 循环也枚举原型链中的属性）。</p> <p><strong>而Object.fromEntries() 则是 Object.entries() 的反转。</strong></p> <p><code>Object.fromEntries()</code> 函数传入一个键值对的列表，并返回一个带有这些键值对的新对象。这个迭代参数应该是一个能够实现@iterator方法的的对象，返回一个迭代器对象。它生成一个具有两个元素的类似数组的对象，第一个元素是将用作属性键的值，第二个元素是与该属性键关联的值。</p> <ul><li>通过 Object.fromEntries， 可以将 Map 转化为 Object:</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+const obj = Object.fromEntries(map);
+console.log(obj); // { foo: &quot;bar&quot;, baz: 42 }
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>通过 Object.fromEntries， 可以将 Array 转化为 Object:</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+const obj = Object.fromEntries(arr);
+console.log(obj); // { 0: &quot;a&quot;, 1: &quot;b&quot;, 2: &quot;c&quot; }
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_6-symbol-prototype-description"><a href="#_6-symbol-prototype-description" class="header-anchor">#</a> 6.<code>Symbol.prototype.description</code></h3> <p>通过工厂函数Symbol（）创建符号时，您可以选择通过参数提供字符串作为描述：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const sym = Symbol('The description');
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>以前，访问描述的唯一方法是将符号转换为字符串：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>assert.equal(String(sym), 'Symbol(The description)');
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>现在引入了getter Symbol.prototype.description以直接访问描述：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>assert.equal(sym.description, 'The description');
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_7-string-prototype-matchall"><a href="#_7-string-prototype-matchall" class="header-anchor">#</a> 7.<code>String.prototype.matchAll</code></h3> <p><code>matchAll()</code> 方法返回一个包含所有匹配正则表达式及分组捕获结果的迭代器。 在 matchAll 出现之前，通过在循环中调用regexp.exec来获取所有匹配项信息（regexp需使用/g标志：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const regexp = RegExp('foo*','g');
+const str = 'table football, foosball';
+
+while ((matches = regexp.exec(str)) !== null) {
+  console.log(`Found ${matches[0]}. Next starts at ${regexp.lastIndex}.`);
+  // expected output: &quot;Found foo. Next starts at 9.&quot;
+  // expected output: &quot;Found foo. Next starts at 19.&quot;
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>如果使用matchAll ，就可以不必使用while循环加exec方式（且正则表达式需使用／g标志）。使用matchAll 会得到一个迭代器的返回值，配合 for...of, array spread, or Array.from() 可以更方便实现功能：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const regexp = RegExp('foo*','g'); 
+const str = 'table football, foosball';
+let matches = str.matchAll(regexp);
+
+for (const match of matches) {
+  console.log(match);
+}
+// Array [ &quot;foo&quot; ]
+// Array [ &quot;foo&quot; ]
+
+// matches iterator is exhausted after the for..of iteration
+// Call matchAll again to create a new iterator
+matches = str.matchAll(regexp);
+
+Array.from(matches, m =&gt; m[0]);
+// Array [ &quot;foo&quot;, &quot;foo&quot; ]
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h4 id="matchall可以更好的用于分组"><a href="#matchall可以更好的用于分组" class="header-anchor">#</a> matchAll可以更好的用于分组</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>var regexp = /t(e)(st(\d?))/g;
+var str = 'test1test2';
+
+str.match(regexp); 
+// Array ['test1', 'test2']
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>let array = [...str.matchAll(regexp)];
+
+array[0];
+// ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]
+array[1];
+// ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_8-function-prototype-tostring-现在返回精确字符，包括空格和注释"><a href="#_8-function-prototype-tostring-现在返回精确字符，包括空格和注释" class="header-anchor">#</a> 8.<code>Function.prototype.toString()</code>现在返回精确字符，包括空格和注释</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>function /* comment */ foo /* another comment */() {}
+
+// 之前不会打印注释部分
+console.log(foo.toString()); // function foo(){}
+
+// ES2019 会把注释一同打印
+console.log(foo.toString()); // function /* comment */ foo /* another comment */ (){}
+
+// 箭头函数
+const bar /* comment */ = /* another comment */ () =&gt; {};
+
+console.log(bar.toString()); // () =&gt; {}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="_9-修改-catch-绑定"><a href="#_9-修改-catch-绑定" class="header-anchor">#</a> 9.修改 <code>catch</code> 绑定</h3> <p>在 ES10 之前，我们必须通过语法为 catch 子句绑定异常变量，无论是否有必要。很多时候 catch 块是多余的。 ES10 提案使我们能够简单的把变量省略掉。</p> <p>不算大的改动。</p> <p>之前是</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>try {} catch(e) {}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>现在是</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>try {} catch {}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_10-新的基本数据类型bigint"><a href="#_10-新的基本数据类型bigint" class="header-anchor">#</a> 10.新的基本数据类型<code>BigInt</code></h3> <p>现在的基本数据类型（值类型）不止5种（ES6之后是六种）了哦！加上BigInt一共有七种基本数据类型，分别是： String、Number、Boolean、Null、Undefined、Symbol、BigInt</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.4e0435ca.js" defer></script><script src="/assets/js/2.04219cb5.js" defer></script><script src="/assets/js/80.90c3558f.js" defer></script><script src="/assets/js/14.fa62e12d.js" defer></script>
+  </body>
+</html>

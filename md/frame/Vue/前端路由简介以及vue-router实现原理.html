@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端路由简介以及vue-router实现原理 | 前端进阶梳理</title>
+    <meta name="description" content="查缺补漏，厚积薄发">
+    <link rel="icon" href="/images/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.17757e47.css" as="style"><link rel="preload" href="/assets/js/app.4e0435ca.js" as="script"><link rel="preload" href="/assets/js/2.04219cb5.js" as="script"><link rel="preload" href="/assets/js/67.0b996a4c.js" as="script"><link rel="preload" href="/assets/js/14.fa62e12d.js" as="script"><link rel="prefetch" href="/assets/js/10.fd7328de.js"><link rel="prefetch" href="/assets/js/100.6d8356e6.js"><link rel="prefetch" href="/assets/js/101.8f4a3183.js"><link rel="prefetch" href="/assets/js/102.d40f505b.js"><link rel="prefetch" href="/assets/js/103.8a69cf89.js"><link rel="prefetch" href="/assets/js/104.16723fdd.js"><link rel="prefetch" href="/assets/js/105.e3561ea4.js"><link rel="prefetch" href="/assets/js/106.1c38cbca.js"><link rel="prefetch" href="/assets/js/107.c9b7ead4.js"><link rel="prefetch" href="/assets/js/108.fec72140.js"><link rel="prefetch" href="/assets/js/109.e4d452c6.js"><link rel="prefetch" href="/assets/js/11.62420f25.js"><link rel="prefetch" href="/assets/js/110.c786ef84.js"><link rel="prefetch" href="/assets/js/111.d793af14.js"><link rel="prefetch" href="/assets/js/112.60663297.js"><link rel="prefetch" href="/assets/js/113.d2db788f.js"><link rel="prefetch" href="/assets/js/114.1005f472.js"><link rel="prefetch" href="/assets/js/115.d3d48b69.js"><link rel="prefetch" href="/assets/js/116.d0116306.js"><link rel="prefetch" href="/assets/js/117.096e81fc.js"><link rel="prefetch" href="/assets/js/118.6b1af5ca.js"><link rel="prefetch" href="/assets/js/119.0afe98c2.js"><link rel="prefetch" href="/assets/js/12.45cacbf6.js"><link rel="prefetch" href="/assets/js/120.3693037f.js"><link rel="prefetch" href="/assets/js/121.4f52f76f.js"><link rel="prefetch" href="/assets/js/122.6d51f9e1.js"><link rel="prefetch" href="/assets/js/123.6af9d3e1.js"><link rel="prefetch" href="/assets/js/124.0aae3048.js"><link rel="prefetch" href="/assets/js/125.5e3afd31.js"><link rel="prefetch" href="/assets/js/126.a8ec53ce.js"><link rel="prefetch" href="/assets/js/127.4b312a04.js"><link rel="prefetch" href="/assets/js/128.96d8d04e.js"><link rel="prefetch" href="/assets/js/129.05e536d7.js"><link rel="prefetch" href="/assets/js/13.7b9cecf2.js"><link rel="prefetch" href="/assets/js/130.1ac6a27d.js"><link rel="prefetch" href="/assets/js/131.bd67a98b.js"><link rel="prefetch" href="/assets/js/132.988d57ec.js"><link rel="prefetch" href="/assets/js/133.4d2a436c.js"><link rel="prefetch" href="/assets/js/134.6f80da26.js"><link rel="prefetch" href="/assets/js/135.b919c4a8.js"><link rel="prefetch" href="/assets/js/136.3e24bf0b.js"><link rel="prefetch" href="/assets/js/137.f2f2af70.js"><link rel="prefetch" href="/assets/js/138.5660bfd5.js"><link rel="prefetch" href="/assets/js/139.c278da1b.js"><link rel="prefetch" href="/assets/js/140.1089e7ad.js"><link rel="prefetch" href="/assets/js/141.afc3c310.js"><link rel="prefetch" href="/assets/js/142.20357454.js"><link rel="prefetch" href="/assets/js/143.205da5ee.js"><link rel="prefetch" href="/assets/js/144.44d7bb97.js"><link rel="prefetch" href="/assets/js/145.e9114ee2.js"><link rel="prefetch" href="/assets/js/15.a36fdfcc.js"><link rel="prefetch" href="/assets/js/16.26dac060.js"><link rel="prefetch" href="/assets/js/17.33c37d3b.js"><link rel="prefetch" href="/assets/js/18.9df62fb6.js"><link rel="prefetch" href="/assets/js/19.87850f83.js"><link rel="prefetch" href="/assets/js/20.727374e1.js"><link rel="prefetch" href="/assets/js/21.54b44bfc.js"><link rel="prefetch" href="/assets/js/22.a2b6288f.js"><link rel="prefetch" href="/assets/js/23.ff26b8aa.js"><link rel="prefetch" href="/assets/js/24.e116138d.js"><link rel="prefetch" href="/assets/js/25.68219dfd.js"><link rel="prefetch" href="/assets/js/26.62f0231f.js"><link rel="prefetch" href="/assets/js/27.9c31933e.js"><link rel="prefetch" href="/assets/js/28.5e7e5a76.js"><link rel="prefetch" href="/assets/js/29.76b9c597.js"><link rel="prefetch" href="/assets/js/3.e03a21f4.js"><link rel="prefetch" href="/assets/js/30.65be1bc1.js"><link rel="prefetch" href="/assets/js/31.7d6bf50f.js"><link rel="prefetch" href="/assets/js/32.73407af6.js"><link rel="prefetch" href="/assets/js/33.e9bcaf6e.js"><link rel="prefetch" href="/assets/js/34.7d2f6e9b.js"><link rel="prefetch" href="/assets/js/35.acef441e.js"><link rel="prefetch" href="/assets/js/36.93ad7b37.js"><link rel="prefetch" href="/assets/js/37.70309a57.js"><link rel="prefetch" href="/assets/js/38.9d4d713f.js"><link rel="prefetch" href="/assets/js/39.1009d0ef.js"><link rel="prefetch" href="/assets/js/4.41ee3e6d.js"><link rel="prefetch" href="/assets/js/40.eb713905.js"><link rel="prefetch" href="/assets/js/41.ce69d14f.js"><link rel="prefetch" href="/assets/js/42.13dd7ec0.js"><link rel="prefetch" href="/assets/js/43.060c75b5.js"><link rel="prefetch" href="/assets/js/44.f3b56735.js"><link rel="prefetch" href="/assets/js/45.20863ea8.js"><link rel="prefetch" href="/assets/js/46.3f27eedb.js"><link rel="prefetch" href="/assets/js/47.39b85e6f.js"><link rel="prefetch" href="/assets/js/48.3be89ba2.js"><link rel="prefetch" href="/assets/js/49.868df574.js"><link rel="prefetch" href="/assets/js/5.82ba14e2.js"><link rel="prefetch" href="/assets/js/50.9bc2f1af.js"><link rel="prefetch" href="/assets/js/51.cc6a4bf8.js"><link rel="prefetch" href="/assets/js/52.bc00435c.js"><link rel="prefetch" href="/assets/js/53.806ca95a.js"><link rel="prefetch" href="/assets/js/54.c088622d.js"><link rel="prefetch" href="/assets/js/55.ea7bfa2d.js"><link rel="prefetch" href="/assets/js/56.2956917b.js"><link rel="prefetch" href="/assets/js/57.a66acfbe.js"><link rel="prefetch" href="/assets/js/58.89d64c94.js"><link rel="prefetch" href="/assets/js/59.c9703f26.js"><link rel="prefetch" href="/assets/js/6.abd0b3ce.js"><link rel="prefetch" href="/assets/js/60.84fb508f.js"><link rel="prefetch" href="/assets/js/61.0458de69.js"><link rel="prefetch" href="/assets/js/62.732e2842.js"><link rel="prefetch" href="/assets/js/63.2a3868a5.js"><link rel="prefetch" href="/assets/js/64.60e5bbf5.js"><link rel="prefetch" href="/assets/js/65.ced324c9.js"><link rel="prefetch" href="/assets/js/66.908a941e.js"><link rel="prefetch" href="/assets/js/68.0ba7e054.js"><link rel="prefetch" href="/assets/js/69.0fcad8c9.js"><link rel="prefetch" href="/assets/js/7.b6580899.js"><link rel="prefetch" href="/assets/js/70.fb7aeb7c.js"><link rel="prefetch" href="/assets/js/71.aed45d21.js"><link rel="prefetch" href="/assets/js/72.28d21aa5.js"><link rel="prefetch" href="/assets/js/73.87966027.js"><link rel="prefetch" href="/assets/js/74.2c8d829a.js"><link rel="prefetch" href="/assets/js/75.076fef8d.js"><link rel="prefetch" href="/assets/js/76.940a8c15.js"><link rel="prefetch" href="/assets/js/77.b1fd3795.js"><link rel="prefetch" href="/assets/js/78.1bd92f56.js"><link rel="prefetch" href="/assets/js/79.f847dd51.js"><link rel="prefetch" href="/assets/js/8.40a63a09.js"><link rel="prefetch" href="/assets/js/80.90c3558f.js"><link rel="prefetch" href="/assets/js/81.13e87c94.js"><link rel="prefetch" href="/assets/js/82.351912c0.js"><link rel="prefetch" href="/assets/js/83.127e331e.js"><link rel="prefetch" href="/assets/js/84.adc36f35.js"><link rel="prefetch" href="/assets/js/85.09c55380.js"><link rel="prefetch" href="/assets/js/86.0d7ea8a7.js"><link rel="prefetch" href="/assets/js/87.d2e7cb67.js"><link rel="prefetch" href="/assets/js/88.26ef9b72.js"><link rel="prefetch" href="/assets/js/89.107cb5dd.js"><link rel="prefetch" href="/assets/js/9.eb1fcb81.js"><link rel="prefetch" href="/assets/js/90.65cba6f7.js"><link rel="prefetch" href="/assets/js/91.9de7f016.js"><link rel="prefetch" href="/assets/js/92.f6f1b156.js"><link rel="prefetch" href="/assets/js/93.d5e571df.js"><link rel="prefetch" href="/assets/js/94.4f308905.js"><link rel="prefetch" href="/assets/js/95.2d8fedff.js"><link rel="prefetch" href="/assets/js/96.0e986d70.js"><link rel="prefetch" href="/assets/js/97.d4dfc858.js"><link rel="prefetch" href="/assets/js/98.95b33636.js"><link rel="prefetch" href="/assets/js/99.0b93c477.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.17757e47.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/hello-word.jpg" alt="前端进阶梳理" class="logo"> <span class="site-name can-hide">前端进阶梳理</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/md/resource/resource.html" class="nav-link">资源工具</a></div><div class="nav-item"><a href="/md/introduction/introduction.html" class="nav-link">导读</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Javascript" class="dropdown-title"><span class="title">Javascript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/js/jsBasic/" class="nav-link">JavaScript基础</a></li><li class="dropdown-item"><!----> <a href="/md/js/es6/" class="nav-link">ECMAScript 6</a></li><li class="dropdown-item"><h4>JS书籍</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/md/js/book/你不知道的javascript上.html" class="nav-link">你不知道的JavaScript(上)</a></li><li class="dropdown-subitem"><a href="/md/js/book/你不知道的javascript中.html" class="nav-link">你不知道的JavaScript(中下)</a></li><li class="dropdown-subitem"><a href="/md/js/book/es6.html" class="nav-link">深入理解ES6</a></li><li class="dropdown-subitem"><a href="/md/js/book/algorithm.html" class="nav-link">JavaScript数据结构和算法</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端概括" class="dropdown-title"><span class="title">前端概括</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/webBasics/CSS/" class="nav-link">CSS / HTML</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/Node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/allPath/" class="nav-link">全链路开发</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/scope/" class="nav-link">领域分支</a></li></ul></div></div><div class="nav-item"><a href="/md/frame/" class="nav-link router-link-active">框架/库</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日积月累" class="dropdown-title"><span class="title">日积月累</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/codeBlock/module/" class="nav-link">代码模块</a></li><li class="dropdown-item"><!----> <a href="/md/codeBlock/week/" class="nav-link">每周汇总</a></li><li class="dropdown-item"><!----> <a href="/md/codeBlock/jobInterview/" class="nav-link">面试收集</a></li><li class="dropdown-item"><h4>方法论</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/1.html" class="nav-link">编程思想</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/2.html" class="nav-link">开发原则</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/3.html" class="nav-link">开发流程</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/6.html" class="nav-link">代码规范</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/4.html" class="nav-link">设计模式</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/5.html" class="nav-link">开源协议</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/md/about/" class="nav-link">关于我</a></div> <a href="https://github.com/lizheng0515/ignore/issues" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/md/resource/resource.html" class="nav-link">资源工具</a></div><div class="nav-item"><a href="/md/introduction/introduction.html" class="nav-link">导读</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Javascript" class="dropdown-title"><span class="title">Javascript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/js/jsBasic/" class="nav-link">JavaScript基础</a></li><li class="dropdown-item"><!----> <a href="/md/js/es6/" class="nav-link">ECMAScript 6</a></li><li class="dropdown-item"><h4>JS书籍</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/md/js/book/你不知道的javascript上.html" class="nav-link">你不知道的JavaScript(上)</a></li><li class="dropdown-subitem"><a href="/md/js/book/你不知道的javascript中.html" class="nav-link">你不知道的JavaScript(中下)</a></li><li class="dropdown-subitem"><a href="/md/js/book/es6.html" class="nav-link">深入理解ES6</a></li><li class="dropdown-subitem"><a href="/md/js/book/algorithm.html" class="nav-link">JavaScript数据结构和算法</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端概括" class="dropdown-title"><span class="title">前端概括</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/webBasics/CSS/" class="nav-link">CSS / HTML</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/Node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/allPath/" class="nav-link">全链路开发</a></li><li class="dropdown-item"><!----> <a href="/md/webBasics/scope/" class="nav-link">领域分支</a></li></ul></div></div><div class="nav-item"><a href="/md/frame/" class="nav-link router-link-active">框架/库</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日积月累" class="dropdown-title"><span class="title">日积月累</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/md/codeBlock/module/" class="nav-link">代码模块</a></li><li class="dropdown-item"><!----> <a href="/md/codeBlock/week/" class="nav-link">每周汇总</a></li><li class="dropdown-item"><!----> <a href="/md/codeBlock/jobInterview/" class="nav-link">面试收集</a></li><li class="dropdown-item"><h4>方法论</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/1.html" class="nav-link">编程思想</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/2.html" class="nav-link">开发原则</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/3.html" class="nav-link">开发流程</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/6.html" class="nav-link">代码规范</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/4.html" class="nav-link">设计模式</a></li><li class="dropdown-subitem"><a href="/md/codeBlock/methodology/5.html" class="nav-link">开源协议</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/md/about/" class="nav-link">关于我</a></div> <a href="https://github.com/lizheng0515/ignore/issues" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/md/frame/" class="sidebar-link">目录</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Vue.js</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/md/frame/Vue/vue.html" class="sidebar-link">1.Vue集合</a></li><li><a href="/md/frame/Vue/巧用Proxy.html" class="sidebar-link">2.巧用Proxy</a></li><li><a href="/md/frame/Vue/Vue性能优化.html" class="sidebar-link">3.Vue性能优化</a></li><li><a href="/md/frame/Vue/Vue懒加载.html" class="sidebar-link">4.组件懒加载:Vue Lazy Component介绍</a></li><li><a href="/md/frame/Vue/vuepress.html" class="sidebar-link">5.vuepress集合</a></li><li><a href="/md/frame/Vue/Vue应该知道的几点.html" class="sidebar-link">6.Vue应该知道的几点</a></li><li><a href="/md/frame/Vue/虚拟DOM与DOM-diff.html" class="sidebar-link">7.虚拟DOM与DOM-diff</a></li><li><a href="/md/frame/Vue/Vue123.html" class="sidebar-link">8.Vue源码解析准备</a></li><li><a href="/md/frame/Vue/Vue源码目录.html" class="sidebar-link">9.Vue源码目录</a></li><li><a href="/md/frame/Vue/前端路由简介以及vue-router实现原理.html" class="active sidebar-link">10.vue-router实现原理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/md/frame/Vue/前端路由简介以及vue-router实现原理.html#后端路由简介" class="sidebar-link">后端路由简介</a></li><li class="sidebar-sub-header"><a href="/md/frame/Vue/前端路由简介以及vue-router实现原理.html#前端路由" class="sidebar-link">前端路由</a></li><li class="sidebar-sub-header"><a href="/md/frame/Vue/前端路由简介以及vue-router实现原理.html#vue-router-实现" class="sidebar-link">Vue router 实现</a></li><li class="sidebar-sub-header"><a href="/md/frame/Vue/前端路由简介以及vue-router实现原理.html#造轮子-动手实现一个数据驱动的-router" class="sidebar-link">造轮子 -- 动手实现一个数据驱动的 router</a></li><li class="sidebar-sub-header"><a href="/md/frame/Vue/前端路由简介以及vue-router实现原理.html#hash-和-history" class="sidebar-link">hash 和 history</a></li></ul></li><li><a href="/md/frame/Vue/Vue双向数据绑定MVVM.html" class="sidebar-link">11.Vue双向数据绑定MVVM</a></li><li><a href="/md/frame/Vue/Vue使用中几个小技巧.html" class="sidebar-link">12.Vue使用中几个小技巧</a></li><li><a href="/md/frame/Vue/Vue梳理.html" class="sidebar-link">13.Vue梳理</a></li><li><a href="/md/frame/Vue/Vue组件汇总.html" class="sidebar-link">14.Vue组件汇总</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Angular</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/md/frame/Angular/1.html" class="sidebar-link">Angular 学习资料</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>jQuery</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/md/frame/jQuery/jq-versions.html" class="sidebar-link">jQuery的版本及退出舞台</a></li><li><a href="/md/frame/jQuery/jq-drawing.html" class="sidebar-link">jQuery 谱图</a></li><li><a href="/md/frame/jQuery/jq-extend.html" class="sidebar-link">jQuery extend</a></li><li><a href="/md/frame/jQuery/jquery-skill.html" class="sidebar-link">jQuery小技巧</a></li><li><a href="/md/frame/jQuery/jQuery__插件开发基础.html" class="sidebar-link">jQuery__插件开发基础</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>类库</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/md/frame/Class/类库汇总.html" class="sidebar-link">插件、工具类库汇总</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="前端路由简介以及vue-router实现原理"><a href="#前端路由简介以及vue-router实现原理" class="header-anchor">#</a> 前端路由简介以及vue-router实现原理</h1> <h2 id="后端路由简介"><a href="#后端路由简介" class="header-anchor">#</a> 后端路由简介</h2> <p>路由这个概念最先是后端出现的。在以前用模板引擎开发页面时，经常会看到这样</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>http://www.xxx.com/login
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>大致流程可以看成这样：</p> <ol><li>浏览器发出请求</li> <li>服务器监听到80端口（或443）有请求过来，并解析url路径</li> <li>根据服务器的路由配置，返回相应信息（可以是 html 字串，也可以是 json 数据，图片等）</li> <li>浏览器根据数据包的 Content-Type 来决定如何解析数据</li></ol> <p>简单来说路由就是用来跟后端服务器进行交互的一种方式，通过不同的路径，来请求不同的资源，请求不同的页面是路由的其中一种功能。</p> <h2 id="前端路由"><a href="#前端路由" class="header-anchor">#</a> 前端路由</h2> <h4 id="_1-hash-模式"><a href="#_1-hash-模式" class="header-anchor">#</a> 1. hash 模式</h4> <p>随着 ajax 的流行，异步数据请求交互运行在不刷新浏览器的情况下进行。而异步交互体验的更高级版本就是 SPA —— 单页应用。单页应用不仅仅是在页面交互是无刷新的，连页面跳转都是无刷新的，为了实现单页应用，所以就有了前端路由。 类似于服务端路由，前端路由实现起来其实也很简单，就是匹配不同的 url 路径，进行解析，然后动态的渲染出区域 html 内容。但是这样存在一个问题，就是 url 每次变化的时候，都会造成页面的刷新。那解决问题的思路便是在改变 url 的情况下，保证页面的不刷新。在 2014 年之前，大家是通过 hash 来实现路由，url hash 就是类似于：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>http://www.xxx.com/#/login
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>这种 #。后面 hash 值的变化，并不会导致浏览器向服务器发出请求，浏览器不发出请求，也就不会刷新页面。另外每次 hash 值的变化，还会触发<code>hashchange</code> 这个事件，通过这个事件我们就可以知道 hash 值发生了哪些变化。然后我们便可以监听<code>hashchange</code>来实现更新页面部分内容的操作：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function matchAndUpdate () {
+   // todo 匹配 hash 做 dom 更新操作
+}
+
+window.addEventListener('hashchange', matchAndUpdate)
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="_2-history-模式"><a href="#_2-history-模式" class="header-anchor">#</a> 2. history 模式</h4> <p>14年后，因为HTML5标准发布。多了两个 API，<code>pushState</code> 和 <code>replaceState</code>，通过这两个 API 可以改变 url 地址且不会发送请求。同时还有<code>popstate</code> 事件。通过这些就能用另一种方式来实现前端路由了，但原理都是跟 hash 实现相同的。用了 HTML5 的实现，单页路由的 url 就不会多出一个#，变得更加美观。但因为没有 # 号，所以当用户刷新页面之类的操作时，浏览器还是会给服务器发送请求。为了避免出现这种情况，所以这个实现需要服务器的支持，需要把所有路由都重定向到根页面。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function matchAndUpdate () {
+   // todo 匹配路径 做 dom 更新操作
+}
+
+window.addEventListener('popstate', matchAndUpdate)
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="vue-router-实现"><a href="#vue-router-实现" class="header-anchor">#</a> Vue router 实现</h2> <p>我们来看一下<code>vue-router</code>是如何定义的：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  mode: 'history',
+  routes: [...]
+})
+
+new Vue({
+  router
+  ...
+})
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>可以看出来<code>vue-router</code>是通过 <code>Vue.use</code>的方法被注入进 Vue 实例中，在使用的时候我们需要全局用到 <code>vue-router</code>的<code>router-view</code>和<code>router-link</code>组件，以及<code>this.$router/$route</code>这样的实例对象。那么是如何实现这些操作的呢？下面我会分几个章节详细的带你进入<code>vue-router</code>的世界。</p> <p><a href="https://github.com/muwoo/blogs/issues/23" target="_blank" rel="noopener noreferrer">vue-router 实现 -- install<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://github.com/muwoo/blogs/issues/24" target="_blank" rel="noopener noreferrer">vue-router 实现 -- new VueRouter(options)<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://github.com/muwoo/blogs/issues/25" target="_blank" rel="noopener noreferrer">vue-router 实现 -- HashHistory<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://github.com/muwoo/blogs/issues/26" target="_blank" rel="noopener noreferrer">vue-router 实现 -- HTML5History<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://github.com/muwoo/blogs/issues/27" target="_blank" rel="noopener noreferrer">vue-router 实现 -- 路由变更监听<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="造轮子-动手实现一个数据驱动的-router"><a href="#造轮子-动手实现一个数据驱动的-router" class="header-anchor">#</a> 造轮子 -- 动手实现一个数据驱动的 router</h2> <p>经过上面的阐述，相信您已经对前端路由以及<code>vue-router</code>有了一些大致的了解。那么这里我们为了贯彻无解肥，我们来手把手撸一个下面这样的数据驱动的 <code>router</code>：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>new Router({
+  id: 'router-view', // 容器视图
+  mode: 'hash', // 模式
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: '&lt;div&gt;Home&lt;/div&gt;',
+      beforeEnter: (next) =&gt; {
+        console.log('before enter home')
+        next()
+      },
+      afterEnter: (next) =&gt; {
+        console.log('enter home')
+        next()
+      },
+      beforeLeave: (next) =&gt; {
+        console.log('start leave home')
+        next()
+      }
+    },
+    {
+      path: '/bar',
+      name: 'bar',
+      component: '&lt;div&gt;Bar&lt;/div&gt;',
+      beforeEnter: (next) =&gt; {
+        console.log('before enter bar')
+        next()
+      },
+      afterEnter: (next) =&gt; {
+        console.log('enter bar')
+        next()
+      },
+      beforeLeave: (next) =&gt; {
+        console.log('start leave bar')
+        next()
+      }
+    },
+    {
+      path: '/foo',
+      name: 'foo',
+      component: '&lt;div&gt;Foo&lt;/div&gt;'
+    }
+  ]
+})
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><h4 id="思路整理"><a href="#思路整理" class="header-anchor">#</a> 思路整理</h4> <p>首先是数据驱动，所以我们可以通过一个<code>route</code>对象来表述当前路由状态，比如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>current = {
+    path: '/', // 路径
+    query: {}, // query
+    params: {}, // params
+    name: '', // 路由名
+    fullPath: '/', // 完整路径
+    route: {} // 记录当前路由属性
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><code>current.route</code>内存放当前路由的配置信息，所以我们只需要监听<code>current.route</code>的变化来动态<code>render</code>页面便可。</p> <p>接着我么需要监听不同的路由变化，做相应的处理。以及实现<code>hash</code>和<code>history</code>模式。</p> <h4 id="数据驱动"><a href="#数据驱动" class="header-anchor">#</a> 数据驱动</h4> <p>这里我们延用<code>vue</code>数据驱动模型，实现一个简单的数据劫持，并更新视图。首先定义我们的<code>observer</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>class Observer {
+  constructor (value) {
+    this.walk(value)
+  }
+
+  walk (obj) {
+    Object.keys(obj).forEach((key) =&gt; {
+      // 如果是对象，则递归调用walk，保证每个属性都可以被defineReactive
+      if (typeof obj[key] === 'object') {
+        this.walk(obj[key])
+      }
+      defineReactive(obj, key, obj[key])
+    })
+  }
+}
+
+function defineReactive(obj, key, value) {
+  let dep = new Dep()
+  Object.defineProperty(obj, key, {
+    get: () =&gt; {
+      if (Dep.target) {
+        // 依赖收集
+        dep.add()
+      }
+      return value
+    },
+    set: (newValue) =&gt; {
+      value = newValue
+      // 通知更新，对应的更新视图
+      dep.notify()
+    }
+  })
+}
+
+export function observer(value) {
+  return new Observer(value)
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><p>再接着，我们需要定义<code>Dep</code>和<code>Watcher</code>:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>export class Dep {
+  constructor () {
+    this.deppend = []
+  }
+  add () {
+    // 收集watcher
+    this.deppend.push(Dep.target)
+  }
+  notify () {
+    this.deppend.forEach((target) =&gt; {
+      // 调用watcher的更新函数
+      target.update()
+    })
+  }
+}
+
+Dep.target = null
+
+export function setTarget (target) {
+  Dep.target = target
+}
+
+export function cleanTarget() {
+  Dep.target = null
+}
+
+// Watcher
+export class Watcher {
+  constructor (vm, expression, callback) {
+    this.vm = vm
+    this.callbacks = []
+    this.expression = expression
+    this.callbacks.push(callback)
+    this.value = this.getVal()
+
+  }
+  getVal () {
+    setTarget(this)
+    // 触发 get 方法，完成对 watcher 的收集
+    let val = this.vm
+    this.expression.split('.').forEach((key) =&gt; {
+      val = val[key]
+    })
+    cleanTarget()
+    return val
+  }
+
+  // 更新动作
+  update () {
+    this.callbacks.forEach((cb) =&gt; {
+      cb()
+    })
+  }
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br></div></div><p>到这里我们实现了一个简单的订阅-发布器，所以我们需要对<code>current.route</code>做数据劫持。一旦<code>current.route</code>更新，我们可以及时的更新当前页面：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  // 响应式数据劫持
+  observer(this.current)
+
+  // 对 current.route 对象进行依赖收集，变化时通过 render 来更新
+  new Watcher(this.current, 'route', this.render.bind(this))
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>恩....到这里，我们似乎已经完成了一个简单的响应式数据更新。其实<code>render</code>也就是动态的为页面指定区域渲染对应内容，这里只做一个简化版的<code>render</code>:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  render() {
+    let i
+    if ((i = this.history.current) &amp;&amp; (i = i.route) &amp;&amp; (i = i.component)) {
+      document.getElementById(this.container).innerHTML = i
+    }
+  }
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="hash-和-history"><a href="#hash-和-history" class="header-anchor">#</a> hash 和 history</h2> <p>接下来是<code>hash</code>和<code>history</code>模式的实现，这里我们可以沿用<code>vue-router</code>的思想，建立不同的处理模型便可。来看一下我实现的核心代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>this.history = this.mode === 'history' ? new HTML5History(this) : new HashHistory(this)
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>当页面变化时，我们只需要监听<code>hashchange</code>和<code>popstate</code>事件，做路由转换<code>transitionTo</code>:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  /**
+   * 路由转换
+   * @param target 目标路径
+   * @param cb 成功后的回调
+   */
+  transitionTo(target, cb) {
+    // 通过对比传入的 routes 获取匹配到的 targetRoute 对象
+    const targetRoute = match(target, this.router.routes)
+    this.confirmTransition(targetRoute, () =&gt; {
+      // 这里会触发视图更新
+      this.current.route = targetRoute
+      this.current.name = targetRoute.name
+      this.current.path = targetRoute.path
+      this.current.query = targetRoute.query || getQuery()
+      this.current.fullPath = getFullPath(this.current)
+      cb &amp;&amp; cb()
+    })
+  }
+
+  /**
+   * 确认跳转
+   * @param route
+   * @param cb
+   */
+  confirmTransition (route, cb) {
+    // 钩子函数执行队列
+    let queue = [].concat(
+      this.router.beforeEach,
+      this.current.route.beforeLeave,
+      route.beforeEnter,
+      route.afterEnter
+    )
+    
+    // 通过 step 调度执行
+    let i = -1
+    const step = () =&gt; {
+      i ++
+      if (i &gt; queue.length) {
+        cb()
+      } else if (queue[i]) {
+        queue[i](step)
+      } else {
+        step()
+      }
+
+    }
+    step(i)
+  }
+}
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div><p>这样我们一方面通过<code>this.current.route = targetRoute</code>达到了对之前劫持数据的更新，来达到视图更新。另一方面我们又通过任务队列的调度，实现了基本的钩子函数<code>beforeEach</code>、<code>beforeLeave</code>、<code>beforeEnter</code>、<code>afterEnter</code>。 到这里其实也就差不多了，接下来我们顺带着实现几个API吧：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  /**
+   * 跳转，添加历史记录
+   * @param location 
+   * @example this.push({name: 'home'})
+   * @example this.push('/')
+   */
+  push (location) {
+    const targetRoute = match(location, this.router.routes)
+
+    this.transitionTo(targetRoute, () =&gt; {
+      changeUrl(this.router.base, this.current.fullPath)
+    })
+  }
+
+  /**
+   * 跳转，添加历史记录
+   * @param location
+   * @example this.replaceState({name: 'home'})
+   * @example this.replaceState('/')
+   */
+  replaceState(location) {
+    const targetRoute = match(location, this.router.routes)
+
+    this.transitionTo(targetRoute, () =&gt; {
+      changeUrl(this.router.base, this.current.fullPath, true)
+    })
+  }
+
+  go (n) {
+    window.history.go(n)
+  }
+
+  function changeUrl(path, replace) {
+    const href = window.location.href
+    const i = href.indexOf('#')
+    const base = i &gt;= 0 ? href.slice(0, i) : href
+    if (replace) {
+      window.history.replaceState({}, '', `${base}#/${path}`)
+    } else {
+      window.history.pushState({}, '', `${base}#/${path}`)
+    }
+  }
+复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br></div></div><p>到这里也就基本上结束了。源码地址：</p> <p><a href="https://github.com/muwoo/blogs/tree/master/src/router" target="_blank" rel="noopener noreferrer">动手撸一个 router<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/md/frame/Vue/Vue源码目录.html" class="prev">9.Vue源码目录</a></span> <span class="next"><a href="/md/frame/Vue/Vue双向数据绑定MVVM.html">11.Vue双向数据绑定MVVM</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.4e0435ca.js" defer></script><script src="/assets/js/2.04219cb5.js" defer></script><script src="/assets/js/67.0b996a4c.js" defer></script><script src="/assets/js/14.fa62e12d.js" defer></script>
+  </body>
+</html>
