@@ -1,4 +1,4 @@
-<p align="center">不要用战术上的勤奋，掩盖战略上的懒惰。</p>
+<p align="center" style="font-size:30px;">不要用战术上的勤奋，掩盖战略上的懒惰。</p>
 
 
 
