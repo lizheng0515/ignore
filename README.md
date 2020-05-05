@@ -1,4 +1,4 @@
-<center><font face="黑体" color=red># 不要用战术上的勤奋，掩盖战略上的懒惰。</font></center>
+<center>不要用战术上的勤奋，掩盖战略上的懒惰。</center>
 
 
 
