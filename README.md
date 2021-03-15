@@ -1,3 +1,5 @@
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=0515ignore.0515ignore)
+
 # 日拱一卒，功不唐捐
 
 
